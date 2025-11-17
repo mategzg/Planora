@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import type { ReactNode } from 'react'
 import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '/logo-planora.svg'
 
 export type NavItem = {
   label: string

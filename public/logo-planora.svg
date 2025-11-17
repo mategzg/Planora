@@ -1,0 +1,8 @@
+<svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="48" rx="12" fill="#0B0B0B"/>
+  <rect x="6" y="6" width="188" height="36" rx="10" fill="#0D0D0D" stroke="#17C3CE" stroke-width="2"/>
+  <path d="M32 14C23.1634 14 16 21.1634 16 30C16 38.8366 23.1634 46 32 46C40.8366 46 48 38.8366 48 30C48 21.1634 40.8366 14 32 14ZM32 41.5C25.6487 41.5 20.5 36.3513 20.5 30C20.5 23.6487 25.6487 18.5 32 18.5C38.3513 18.5 43.5 23.6487 43.5 30C43.5 36.3513 38.3513 41.5 32 41.5Z" fill="#17C3CE"/>
+  <path d="M77 33C77 26.9249 81.9249 22 88 22H96C101.523 22 106 26.4772 106 32C106 37.5228 101.523 42 96 42H88C81.9249 42 77 37.0751 77 31V33Z" fill="#17C3CE" fill-opacity="0.14"/>
+  <text x="64" y="33" fill="#FFFFFF" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="18" font-weight="700">Planora</text>
+  <text x="64" y="44" fill="#8A8F98" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Full-Stack Preview · 72-96h</text>
+</svg>
