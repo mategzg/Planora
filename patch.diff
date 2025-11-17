@@ -1,0 +1,71 @@
+*** Begin Patch
+*** Update File: src/App.tsx
+@@
+-const caseStudies = [
+-  {
+-    title: 'Brickell - 14.2k ft fintech HQ',
+-    summary: 'Previewed 3 towers for a HQ relocation; delivered a tenant-safe deck in 84 hours.',
+-    metrics: ['3 options / 84h', 'TI math + stacking', '3 tours booked'],
+-  },
+-  {
+-    title: 'Doral - 8.5k ft hybrid office',
+-    summary: 'Side-by-side hybrid scenarios with warm minimal visuals for a Class A floorplate.',
+-    metrics: ['2 fit options', 'Lobby + floor stills', 'Saved 1 week of prep'],
+-  },
+-  {
+-    title: 'Coral Gables - 4.2k ft renewal',
+-    summary: 'Used a preview deck to negotiate renewal vs relocation for a legal client.',
+-    metrics: ['Test-fit + deal math', 'Watermarked preview deck', 'Client go/no-go in 48h'],
+-  },
+-]
++const caseStudies = [
++  {
++    eyebrow: 'Demo • 3k ft • Delivered in 72 h',
++    title: 'Suburban office for a tech tenant',
++    body: 'One test-fit option focused on hybrid work.',
++    bullets: [
++      'Clean 2D + axo for landlord updates.',
++      'Two stills + 60-second video for tenant and landlord.',
++    ],
++  },
++  {
++    eyebrow: 'Demo • 14k ft • Delivered in 72 h',
++    title: 'Multi-tenant floor for a finance client',
++    body: 'Single option aligned with target ratios.',
++    bullets: [
++      'Clean 2D + section for internal review.',
++      'Two stills + 60-second video for the leasing team.',
++    ],
++  },
++  {
++    eyebrow: 'Demo • 8k ft • Delivered in 84 h',
++    title: 'Hybrid floorplate for a growth tenant',
++    body: 'Balanced focus rooms + open plan for Miami corridors.',
++    bullets: [
++      'Test-fit aligned to headcount and ratios.',
++      'Placeholder stills + 60s walkthrough for landlord/tenant.',
++    ],
++  },
++]
++
++const quickFaqs = [
++  {
++    question: 'What do I need to provide?',
++    answer:
++      'Shell plan if available (DWG/PDF/JPG), ft range, headcount, and basic use. Brand guidelines are optional.',
++  },
++  {
++    question: 'When does the 72-96-hour timeline start?',
++    answer: 'Once we confirm the brief on a quick pre-flight call.',
++  },
++  {
++    question: "What's included in the price?",
++    answer:
++      'One test-fit, a clean 2D plan + section/axo, two stills, a 60-second video, and one revision.',
++  },
++  {
++    question: 'Is this for construction?',
++    answer: 'No. All outputs are schematic only—no permit/seal.',
++  },
++]
+*** End Patch
