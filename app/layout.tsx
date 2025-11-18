@@ -1,7 +1,7 @@
-﻿import type { Metadata, Viewport } from 'next'
+import './globals.css'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import type { ReactNode } from 'react'
-import './globals.css'
 import { SITE_URL } from '@/lib/content'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
@@ -50,5 +50,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   )
 }
-
-
