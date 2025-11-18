@@ -1,6 +1,6 @@
 ﻿export const SITE_URL = 'https://planora-testfit.vercel.app'
 
-export const primaryCta = 'mailto:planora.testfit@gmail.com?subject=Planora%20%2015%20min%20call%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%20range%5D&body=Hi%20Planora%20team,%0A%0AI%27m%20a%20tenant-rep%20broker%20in%20%5BSubmarket%5D.%20Deal%20size:%20%5BFt%20range%5D.%0ATarget%20timeline:%20%5BDate%5D.%20Company:%20%5BCompany%5D.%0APlease%20confirm%20a%20slot%20for%20a%2015-min%20pre-flight%20call.%0A%0A[Name],%20[Phone]'
+export const primaryCta = 'mailto:planora.testfit@gmail.com?subject=Planora%20%2015%20min%20call%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%20range%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AI%27m%20a%20tenant-rep%20broker%20in%20%5BSubmarket%5D.%20Deal%20size:%20%5BFt%20range%5D.%0D%0ATarget%20timeline:%20%5BDate%5D.%20Company:%20%5BCompany%5D.%0D%0APlease%20confirm%20a%20slot%20for%20a%2015-min%20pre-flight%20call.%0D%0A%20%5BName%5D,%20%5BPhone%5D'
 
 export type NavItem = {
   label: string
