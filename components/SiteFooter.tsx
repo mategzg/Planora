@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3 text-muted">
           <Link href="/" className="flex items-center" aria-label="Planora home">
-            <Image src="/logo-planora.png" alt="Planora" width={180} height={44} className="h-10 w-auto" />
+            <Image src="/logo-planora.png" alt="Planora" width={180} height={44} className="h-11 w-auto" />
           </Link>
           <span className="text-sm">Full-Stack Preview for Miami brokers</span>
         </div>
