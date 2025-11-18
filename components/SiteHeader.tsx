@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,12 +16,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link
-          href="/"
-          className="flex items-center gap-3 rounded-full bg-ink px-3 py-1 text-sm font-semibold text-paper shadow-lg"
-        >
-          <Image src="/logo-planora.png" alt="Planora logo" width={20} height={20} className="h-5 w-5" />
-          <span>Planora</span>
+        <Link href="/" className="flex items-center" aria-label="Planora home">
+          <Image
+            src="/logo-planora.png"
+            alt="Planora"
+            width={180}
+            height={44}
+            priority
+            className="h-11 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-5 lg:flex">
@@ -48,4 +51,3 @@ export function SiteHeader() {
     </header>
   )
 }
-
