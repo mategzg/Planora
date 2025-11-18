@@ -1,4 +1,4 @@
-﻿import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { navItems } from '@/lib/content'
 
@@ -20,8 +20,8 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
-          <a className="text-accent transition hover:opacity-80" href="mailto:planora.testfitgmail.com">
-            planora.testfitgmail.com
+          <a className="text-accent transition hover:opacity-80" href="mailto:planora.testfit@gmail.com">
+            planora.testfit@gmail.com
           </a>
           <a className="text-accent transition hover:opacity-80" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
             LinkedIn

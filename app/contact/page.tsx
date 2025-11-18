@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { primaryCta } from '@/lib/content'
 
@@ -32,8 +32,8 @@ export default function ContactPage() {
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm lg:col-span-1">
           <p className="text-sm text-muted">Email</p>
-          <a className="text-lg font-semibold text-ink" href="mailto:planora.testfitgmail.com">
-            planora.testfitgmail.com
+          <a className="text-lg font-semibold text-ink" href="mailto:planora.testfit@gmail.com">
+            planora.testfit@gmail.com
           </a>
           <p className="text-sm text-muted">WhatsApp: +51 987 790 457</p>
           <p className="text-sm text-muted">We respond within one business day.</p>

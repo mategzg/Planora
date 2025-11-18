@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MediaPlaceholder } from '@/components/MediaPlaceholder'
 import {
@@ -284,10 +284,10 @@ export default function HomePage() {
               Schedule 15 min Call
             </a>
             <a
-              href="mailto:planora.testfitgmail.com"
+              href="mailto:planora.testfit@gmail.com"
               className="rounded-full border border-accent/40 bg-transparent px-5 py-3 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:text-ink"
             >
-              Or email us at planora.testfitgmail.com
+              Or email us at planora.testfit@gmail.com
             </a>
           </div>
         </div>
