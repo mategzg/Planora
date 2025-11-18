@@ -1,6 +1,6 @@
-export const SITE_URL = 'https://planora-teal.vercel.app'
+﻿export const SITE_URL = 'https://planora-testfit.vercel.app'
 
-export const primaryCta = 'mailto:planora.testfit@gmail.com?subject=Full-Stack%20Preview%20%5Bft%20range%5D%20%5BSubmarket%5D%20%5BTarget%20date%5D&body=Broker%20name:%0ACompany:%0AFt%20range:%0ASubmarket:%0ATimeline:%0A'
+export const primaryCta = 'mailto:planora.testfit@gmail.com?subject=Planora%20%2015%20min%20call%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%20range%5D&body=Hi%20Planora%20team,%0A%0AI%27m%20a%20tenant-rep%20broker%20in%20%5BSubmarket%5D.%20Deal%20size:%20%5BFt%20range%5D.%0ATarget%20timeline:%20%5BDate%5D.%20Company:%20%5BCompany%5D.%0APlease%20confirm%20a%20slot%20for%20a%2015-min%20pre-flight%20call.%0A%0A[Name],%20[Phone]'
 
 export type NavItem = {
   label: string
@@ -19,12 +19,12 @@ export const navItems: NavItem[] = [
 export const proofPoints = [
   {
     label: 'Delivery',
-    value: '72-96 h',
+    value: '72�96 h',
     detail: 'Calendar hours from intake completion to preview drop-off.',
   },
   {
     label: 'Scope',
-    value: '2k-20k ft',
+    value: '2k�20k ft',
     detail: 'Doral, Blue Lagoon, Coral Gables, Brickell, Kendall, South Broward.',
   },
   {
@@ -64,30 +64,30 @@ export const steps = [
     title: 'Pre-flight call (T+0 h)',
     detail: 'A 15-minute call to align on ratios, risks, style, and timing; SLA starts.',
   },
-  { title: 'Test-fit (T+36-48 h)', detail: 'One layout option with basic ratios and notes.' },
+  { title: 'Test-fit (T+36�48 h)', detail: 'One layout option with basic ratios and notes.' },
   {
-    title: 'Renders (T+48-72 h)',
+    title: 'Renders (T+48�72 h)',
     detail: 'Two stills aligned with the test-fit and your audience.',
   },
-  { title: 'Video (T+72-96 h)', detail: 'A 60-second walkthrough edited for real broker use.' },
+  { title: 'Video (T+72�96 h)', detail: 'A 60-second walkthrough edited for real broker use.' },
   { title: 'One revision & delivery', detail: 'One round of changes included, then final files.' },
 ]
 
 export const qaChips = ['Layout', 'Ratios & ADA (macro)', 'Graphics & Naming']
 
 export const pricingTiers = [
-  { range: '2-5k ft', price: 'US$ 1,000', note: 'Launch' },
-  { range: '5-10k ft', price: 'US$ 1,300', note: 'Launch' },
-  { range: '10-15k ft', price: 'US$ 1,700', note: 'Launch' },
-  { range: '15-20k ft', price: 'US$ 2,100', note: 'Launch' },
+  { range: '2�5k ft', price: 'US$ 1,000', note: 'Launch' },
+  { range: '5�10k ft', price: 'US$ 1,300', note: 'Launch' },
+  { range: '10�15k ft', price: 'US$ 1,700', note: 'Launch' },
+  { range: '15�20k ft', price: 'US$ 2,100', note: 'Launch' },
   { range: '20k+ ft', price: 'Request a quote', note: 'Scope review' },
 ]
 
 export const pricingConditions = [
-  'Launch pricing (public) for Miami tenant-rep office previews (2k-20k ft); >20k by quote.',
+  'Launch pricing (public) for Miami tenant-rep office previews (2k�20k ft); >20k by quote.',
   'Scope: 1 test-fit, 1 clean 2D plan (PDF A3), 1 section/axonometric, 2 JPG stills, 1x60s MP4, schematic only.',
   'One revision included; SketchUp 3D model available on request; no Revit export.',
-  'Delivery window 72-96h from intake completion; no 48h rush option in public offer.',
+  'Delivery window 72�96 h from intake completion; no 48h rush option in public offer.',
   'Payment: 50/50 (deposit + delivery). Currency always shown as US$.',
   'Not for construction or permitting; tenant-facing and landlord-ready preview materials.',
   'File formats: PDF A3, DWG, 2x JPG stills, 1x MP4 video with subtle brand overlay.',
@@ -119,8 +119,8 @@ export const individualItems = [
 
 export const caseStudies = [
   {
-    eyebrow: 'Demo - 3k ft - Delivered in 72 h',
-    title: 'Suburban office for a tech tenant',
+    eyebrow: 'Demo – 3k ft – Delivered in 72 h',
+    title: 'Demo 3k ft – Delivered in 72 h',
     body: 'One test-fit option focused on hybrid work.',
     bullets: [
       'Clean 2D + axo for landlord updates.',
@@ -128,8 +128,8 @@ export const caseStudies = [
     ],
   },
   {
-    eyebrow: 'Demo - 14k ft - Delivered in 72 h',
-    title: 'Multi-tenant floor for a finance client',
+    eyebrow: 'Demo – 14k ft – Delivered in 72 h',
+    title: 'Demo 14k ft – Delivered in 72 h',
     body: 'Single option aligned with target ratios.',
     bullets: [
       'Clean 2D + section for internal review.',
@@ -137,7 +137,7 @@ export const caseStudies = [
     ],
   },
   {
-    eyebrow: 'Demo - 8k ft - Delivered in 84 h',
+    eyebrow: 'Demo – 8k ft – Delivered in 84 h',
     title: 'Hybrid floorplate for a growth tenant',
     body: 'Balanced focus rooms + open plan for Miami corridors.',
     bullets: [
@@ -154,7 +154,7 @@ export const quickFaqs = [
       'Shell plan if available (DWG/PDF/JPG), ft range, headcount, basic use. Brand guidelines optional.',
   },
   {
-    question: 'When does the 72-96h timeline start?',
+    question: 'When does the 72�96 h timeline start?',
     answer: 'Once we confirm the brief on a quick pre-flight call and have all inputs.',
   },
   {
@@ -175,7 +175,7 @@ export const faqs = [
       'Shell (DWG/PDF/JPG) if available, ft range, headcount, basic use, and any style cues. If no shell, we use a generic footprint to move fast.',
   },
   {
-    question: 'When does the 72-96h SLA start?',
+    question: 'When does the 72�96 h SLA start?',
     answer:
       'After the pre-flight call confirms the brief and files. If inputs are missing, the SLA pauses until we have them.',
   },
@@ -185,7 +185,7 @@ export const faqs = [
   },
   {
     question: 'How do you price footage?',
-    answer: 'Public Launch tiers cover 2k-20k ft. >20k ft is quoted after a quick scope review.',
+    answer: 'Public Launch tiers cover 2k�20k ft. >20k ft is quoted after a quick scope review.',
   },
   {
     question: 'Can you work under NDA?',
@@ -223,7 +223,17 @@ export const submarkets = [
   'Other',
 ]
 
-export const ftRanges = ['2-5k ft', '5-10k ft', '10-15k ft', '15-20k ft', '20k+ ft']
+export const ftRanges = ['2�5k ft', '5�10k ft', '10�15k ft', '15�20k ft', '20k+ ft']
 
 export const giftStyles = ['Modern Minimal', 'Tech Chic', 'Warm Contemporary']
+
+
+
+
+
+
+
+
+
+
 

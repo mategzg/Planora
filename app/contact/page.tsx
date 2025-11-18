@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { primaryCta } from '@/lib/content'
 
@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     'Contact Planora to schedule a 15-minute call about a Full-Stack Preview for Miami tenant-rep brokers.',
   alternates: {
-    canonical: 'https://planora-teal.vercel.app/contact',
+    canonical: 'https://planora-testfit.vercel.app/contact',
   },
   openGraph: {
     title: 'Contact | Planora',
     description:
       'Contact Planora to schedule a 15-minute call about a Full-Stack Preview for Miami tenant-rep brokers.',
-    url: 'https://planora-teal.vercel.app/contact',
+    url: 'https://planora-testfit.vercel.app/contact',
     images: ['/og-planora.png'],
   },
 }
@@ -44,6 +44,7 @@ export default function ContactPage() {
             Schedule 15 min Call
           </a>
         </div>
+          <p className="text-xs text-muted">or use the contact form <a href="/contact" className="underline">/contact</a>.</p>
         <div className="lg:col-span-2">
           <ContactForm />
         </div>
@@ -51,5 +52,6 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 

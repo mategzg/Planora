@@ -11,15 +11,15 @@ import {
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
   description:
-    'Launch pricing for the Planora Full-Stack Preview (2k-20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+    'Launch pricing for the Planora Full-Stack Preview (2k�20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
   alternates: {
-    canonical: 'https://planora-teal.vercel.app/pricing',
+    canonical: 'https://planora-testfit.vercel.app/pricing',
   },
   openGraph: {
     title: 'Pricing | Planora',
     description:
-      'Launch pricing for the Planora Full-Stack Preview (2k-20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
-    url: 'https://planora-teal.vercel.app/pricing',
+      'Launch pricing for the Planora Full-Stack Preview (2k�20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+    url: 'https://planora-testfit.vercel.app/pricing',
     images: ['/og-planora.png'],
   },
 }
@@ -31,6 +31,7 @@ export default function PricingPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Full Launch pricing and add-ons</h1>
         <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
+        <p className="text-sm text-muted">Launch pricing � first 60 days � up to 5 clients</p>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (
@@ -38,10 +39,17 @@ export default function PricingPage() {
             key={tier.range}
             className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Launch</p>
             <p className="text-lg font-semibold">{tier.range}</p>
-            <p className="text-2xl font-bold text-ink">{tier.price}</p>
-            <p className="text-sm text-muted">{tier.note}</p>
+            {tier.range === '20k+ ft' ? (
+              <a
+                href={primaryCta}
+                className="text-2xl font-bold text-accent underline underline-offset-4"
+              >
+                Request a quote
+              </a>
+            ) : (
+              <p className="text-2xl font-bold text-ink">{tier.price}</p>
+            )}
           </div>
         ))}
       </div>
@@ -84,15 +92,17 @@ export default function PricingPage() {
             <li key={item}>{item}</li>
           ))}
         </ul>
+        <p className="text-xs text-muted">One revision included  SketchUp on request  50/50 payment  No rush  No Revit.</p>
       </div>
 
       <div className="flex flex-wrap gap-3">
         <a
           href={primaryCta}
-          className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Schedule 15 min Call
         </a>
+        <p className="text-xs text-muted">or use the contact form <Link href="/contact" className="underline">/contact</Link>.</p>
         <Link
           href="/gift"
           className="rounded-full border border-accent/60 px-5 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:shadow-md"
@@ -103,5 +113,4 @@ export default function PricingPage() {
     </div>
   )
 }
-
 

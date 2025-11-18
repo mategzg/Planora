@@ -42,3 +42,4 @@
 - Do: implement with Tailwind/Next components and strict TS.
 - Check: run npm run typecheck, npm run lint, npm run build (tests temporarily paused).
 - Act: fix issues, log outcomes in docs/LOG.md, update TODO.
+- [x] Enforce broker copy polish (en-dash ranges, US$ pricing, mailto CTAs, contact fallback, gift honeypot).

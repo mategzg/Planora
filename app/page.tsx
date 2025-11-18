@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MediaPlaceholder } from '@/components/MediaPlaceholder'
 import {
@@ -13,17 +13,17 @@ import {
 } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'Planora | Full-Stack office previews in 72-96 h for Miami brokers',
+  title: 'Planora | Full-Stack office previews in 72�96 h for Miami brokers',
   description:
-    'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72-96 hours for 2k-20k ft deals.',
+    'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72�96 hours for 2k�20k ft deals.',
   alternates: {
-    canonical: 'https://planora-teal.vercel.app/',
+    canonical: 'https://planora-testfit.vercel.app/',
   },
   openGraph: {
-    title: 'Planora | Full-Stack office previews in 72-96 h for Miami brokers',
+    title: 'Planora | Full-Stack office previews in 72�96 h for Miami brokers',
     description:
-      'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72-96 hours for 2k-20k ft deals.',
-    url: 'https://planora-teal.vercel.app/',
+      'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72�96 hours for 2k�20k ft deals.',
+    url: 'https://planora-testfit.vercel.app/',
     images: ['/og-planora.png'],
   },
 }
@@ -34,13 +34,13 @@ export default function HomePage() {
       <section className="grid items-center gap-10 lg:grid-cols-2">
         <div className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            For office tenant-rep brokers - 2k-20k ft in Miami
+            For tenant-rep brokers  Miami  2k�20k ft
           </p>
           <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Close faster with a Full-Stack Preview in 72-96 h
+            Close faster with a Full-Stack Preview in 72�96 h
           </h1>
           <p className="max-w-2xl text-lg text-muted">
-            One fixed-scope package with a test-fit, clean 2D, two stills, and a 60-second video-built to move mid-ticket office deals in Miami's key submarkets.
+            One decision-ready option: test-fit, clean 2D, two stills, and a 60-second video�built for tenant-rep deals in Miami's key submarkets.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -56,6 +56,7 @@ export default function HomePage() {
               See how it works
             </Link>
           </div>
+          <p className="text-xs text-muted">or use the contact form <Link href="/contact" className="underline">/contact</Link>.</p>
           <p className="text-sm text-muted">Not for construction. No permit/seal. Schematic only.</p>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -87,7 +88,7 @@ export default function HomePage() {
       <section id="what-you-get" className="space-y-4">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Outputs</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">What you get in 72-96 hours</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">What you get in 72�96 hours</h2>
           <p className="max-w-3xl text-muted">One Full-Stack Preview. Four deal-ready outputs.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
@@ -157,7 +158,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
             <h3 className="text-lg font-semibold">Mid-ticket office deals</h3>
-            <p className="mt-2 text-sm text-muted">2k to 20k ft in Doral, Blue Lagoon, Coral Gables, Brickell, Kendall, South Broward.</p>
+            <p className="mt-2 text-sm text-muted">2k to 2-?0k ft in Doral, Blue Lagoon, Coral Gables, Brickell, Kendall, South Broward.</p>
           </div>
         </div>
       </section>
@@ -165,7 +166,7 @@ export default function HomePage() {
       <section id="pricing" className="space-y-4">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Pricing for 2k-20k ft offices</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">Pricing for 2k�20k ft offices</h2>
           <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -266,7 +267,6 @@ export default function HomePage() {
           See full FAQ
         </Link>
       </section>
-
       <section id="cta" className="overflow-hidden rounded-3xl bg-ink px-8 py-10 text-paper shadow-xl">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
@@ -279,13 +279,13 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <a
               href={primaryCta}
-              className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+              className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Schedule 15 min Call
             </a>
             <a
               href="mailto:planora.testfit@gmail.com"
-              className="rounded-full border border-accent/40 bg-transparent px-5 py-3 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:text-ink"
+              className="rounded-full border border-accent/40 bg-transparent px-5 py-3 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Or email us at planora.testfit@gmail.com
             </a>
@@ -295,6 +295,4 @@ export default function HomePage() {
     </div>
   )
 }
-
-
 

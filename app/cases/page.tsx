@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Cases | Planora',
   description: 'See demo Full-Stack Preview cases for Miami tenant-rep brokers: layouts, visuals, and delivery timing.',
   alternates: {
-    canonical: 'https://planora-teal.vercel.app/cases',
+    canonical: 'https://planora-testfit.vercel.app/cases',
   },
   openGraph: {
     title: 'Cases | Planora',
     description: 'See demo Full-Stack Preview cases for Miami tenant-rep brokers: layouts, visuals, and delivery timing.',
-    url: 'https://planora-teal.vercel.app/cases',
+    url: 'https://planora-testfit.vercel.app/cases',
     images: ['/og-planora.png'],
   },
 }
@@ -34,13 +34,13 @@ export default function CasesPage() {
             <h2 className="text-xl font-semibold text-ink">{cs.title}</h2>
             <p className="text-sm text-muted">{cs.body}</p>
             <div className="grid gap-3 md:grid-cols-2">
-              <MediaPlaceholder label="Placeholder - plan + axo" aspect="aspect-[4/3]" />
+              <MediaPlaceholder label="Clean plan and axonometric demo  3k ft" aspect="aspect-[4/3]" />
               <div className="space-y-3">
-                <MediaPlaceholder label="Placeholder - render #1" aspect="aspect-[4/3]" />
-                <MediaPlaceholder label="Placeholder - render #2" aspect="aspect-[4/3]" />
+                <MediaPlaceholder label="Render still  demo set 1" aspect="aspect-[4/3]" />
+                <MediaPlaceholder label="Render still  demo set 1" aspect="aspect-[4/3]" />
               </div>
             </div>
-            <MediaPlaceholder label="Placeholder - 60s video frame" />
+            <MediaPlaceholder label="Video thumbnail  60-second walkthrough" />
             <ul className="list-disc space-y-1 pl-5 text-sm text-muted">
               {cs.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
@@ -55,5 +55,6 @@ export default function CasesPage() {
     </div>
   )
 }
+
 
 

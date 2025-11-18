@@ -56,3 +56,4 @@
 - Ported all pages/components to /app with next/link routing, adjusted Tailwind/PostCSS config to CJS, rewrote globals.css, and removed Vite artifacts.
 - Commands: npm run typecheck; npm run lint; npm run build (tests skipped per instruction).
 - Quality gates: typecheck OK, lint OK, build OK; test gate paused per user.
+## 2025-11-18 Tailwind/CTA precision\n- Enforced en-dash ranges, ft notation, US$ pricing, and updated CTA mailto with contact fallback; refreshed pricing note and quote link.\n- Fixed hero/cases copy, alt labels, footer/header focus, and added gift honeypot + reCAPTCHA env placeholder.\n- Canonicals pointed to https://planora-testfit.vercel.app and CTA/email consistency across pages.\n- Commands: npm run typecheck; npm run lint; npm run build (tests skipped per user).\n- Quality gates: typecheck OK, lint OK, build OK; tests skipped per instruction.\n

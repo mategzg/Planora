@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -32,7 +32,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-semibold transition hover:text-accent ${
+              className={`text-sm font-semibold transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                 isActive(item.href) ? 'text-accent underline decoration-2 underline-offset-8' : 'text-muted'
               }`}
             >
@@ -51,3 +51,4 @@ export function SiteHeader() {
     </header>
   )
 }
+

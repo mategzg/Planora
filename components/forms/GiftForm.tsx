@@ -8,6 +8,13 @@ export function GiftForm() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const honey = (formData.get('company_website') as string) || ''
+    // Honeypot: if filled, treat as success but ignore processing.
+    if (honey.trim()) {
+      setStatus('success')
+      return
+    }
     setStatus('success')
   }
 
@@ -16,6 +23,7 @@ export function GiftForm() {
       onSubmit={handleSubmit}
       className="space-y-4 rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm"
     >
+      <input type="text" name="company_website" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="grid gap-3 md:grid-cols-2">
         <label className="space-y-1 text-sm font-semibold text-ink">
           Name

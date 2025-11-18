@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.",
   alternates: {
-    canonical: 'https://planora-teal.vercel.app/how-it-works',
+    canonical: 'https://planora-testfit.vercel.app/how-it-works',
   },
   openGraph: {
     title: 'How it works | Planora',
     description:
       "See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.",
-    url: 'https://planora-teal.vercel.app/how-it-works',
+    url: 'https://planora-testfit.vercel.app/how-it-works',
     images: ['/og-planora.png'],
   },
 }
@@ -34,7 +34,7 @@ export default function HowItWorksPage() {
           >
             <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               <span>Step {idx + 1}</span>
-              <span>{step.title.includes('T+') ? step.title.split(' ')[0] : '72-96 h'}</span>
+              <span>{step.title.includes('T+') ? step.title.split(' ')[0] : '72�96 h'}</span>
             </div>
             <h2 className="text-lg font-semibold text-ink">{step.title}</h2>
             <p className="text-sm text-muted">{step.detail}</p>
@@ -56,5 +56,9 @@ export default function HowItWorksPage() {
     </div>
   )
 }
+
+
+
+
 
 
