@@ -7,10 +7,9 @@ export function SiteFooter() {
     <footer className="border-t border-slate-200 bg-paper py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3 text-muted">
-          <span className="flex items-center gap-2 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-paper shadow">
-            <Image src="/logo-planora.png" alt="Planora logo" width={18} height={18} className="h-4 w-4" />
-            Planora
-          </span>
+          <Link href="/" className="flex items-center" aria-label="Planora home">
+            <Image src="/logo-planora.png" alt="Planora" width={180} height={44} className="h-10 w-auto" />
+          </Link>
           <span className="text-sm">Full-Stack Preview for Miami brokers</span>
         </div>
 
@@ -32,4 +31,3 @@ export function SiteFooter() {
     </footer>
   )
 }
-
