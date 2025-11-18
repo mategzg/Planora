@@ -58,3 +58,7 @@
 - Quality gates: typecheck OK, lint OK, build OK; test gate paused per user.
 ## 2025-11-18 Tailwind/CTA precision\n- Enforced en-dash ranges, ft notation, US$ pricing, and updated CTA mailto with contact fallback; refreshed pricing note and quote link.\n- Fixed hero/cases copy, alt labels, footer/header focus, and added gift honeypot + reCAPTCHA env placeholder.\n- Canonicals pointed to https://planora-testfit.vercel.app and CTA/email consistency across pages.\n- Commands: npm run typecheck; npm run lint; npm run build (tests skipped per user).\n- Quality gates: typecheck OK, lint OK, build OK; tests skipped per instruction.\n
 ## 2025-11-18 Encoding/CTA fixes\n- Restored app/page.tsx to a clean version, removed duplicate pricing badges, and fixed footnote/sections.\n- Replaced en-dash characters with &ndash; entities across pages/content; corrected South Broward usage and pricing mailto quote body.\n- Gates: typecheck, lint, build OK; tests skipped per instruction.
+## 2025-11-18 Encoding QA
+- Normalized ranges to &ndash; and area units to ft&sup2;; fixed video copy glitch and South Broward naming.
+- Pricing: kept single launch cues, 20k+ mailto with ft&sup2; in body.
+- Gates: typecheck, lint, build (tests skipped per instruction).

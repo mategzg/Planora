@@ -40,7 +40,7 @@ export default function HomePage() {
             Close faster with a Full-Stack Preview in 72&ndash;96 h
           </h1>
           <p className="max-w-2xl text-lg text-muted">
-            One decision-ready option: test-fit, clean 2D, two stills, and a 60-second video�built for tenant-rep deals in Miami's key submarkets.
+            One decision-ready option: test-fit, clean 2D, two stills, and a 60-second video-built for tenant-rep deals in Miami's key submarkets.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
