@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{ts,tsx,js,jsx}', './tests/**/*.{ts,tsx,js,jsx}'],
+module.exports = {
+  content: ['./app/**/*.{ts,tsx,mdx}', './components/**/*.{ts,tsx}', './lib/**/*.{ts,tsx}', './tests/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -12,8 +12,8 @@ export default {
         alert: '#FFD447',
       },
       fontFamily: {
-        heading: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Space Grotesk"', '"Inter"', 'system-ui', 'sans-serif'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       letterSpacing: {

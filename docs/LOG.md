@@ -51,3 +51,8 @@
 ## 2025-11-17 15:39 ASCII cleanup
 - Removed non-ASCII replacement characters in FAQ copy, reran Prettier, lint, tests, and build to keep pipeline green.
 - Commands: npx prettier -w src/App.tsx, npm run lint, npm test, npm run build.
+## 2025-11-17 18:40 Next.js migration
+- Migrated Vite SPA to Next.js 14 App Router with shared nav/header/footer, canonical base set to https://planora-teal.vercel.app, and centralized content data in lib/.
+- Ported all pages/components to /app with next/link routing, adjusted Tailwind/PostCSS config to CJS, rewrote globals.css, and removed Vite artifacts.
+- Commands: npm run typecheck; npm run lint; npm run build (tests skipped per instruction).
+- Quality gates: typecheck OK, lint OK, build OK; test gate paused per user.

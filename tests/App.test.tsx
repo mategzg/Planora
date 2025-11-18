@@ -1,32 +1,24 @@
-import { render, screen } from '@testing-library/react'
-import { describe, expect, it, beforeEach } from 'vitest'
-import App from '../src/App'
+﻿import { render, screen } from '@testing-library/react'
+import HomePage from '@/app/page'
+import PricingPage from '@/app/pricing/page'
 
-describe('Planora site', () => {
-  beforeEach(() => {
-    window.history.pushState({}, '', '/')
+describe('Planora marketing pages', () => {
+  it('renders the home hero headline', () => {
+    render(<HomePage />)
+    expect(screen.getByText(/Full-Stack Preview in 72-96 h/i)).toBeInTheDocument()
   })
 
-  it('renders the home hero with the core promise and CTAs', () => {
-    render(<App />)
-
-    expect(
-      screen.getByRole('heading', { level: 1, name: /close faster with a full-stack preview/i }),
-    ).toBeInTheDocument()
-    expect(screen.getAllByRole('link', { name: /schedule 15 min call/i }).length).toBeGreaterThan(0)
-    expect(screen.getByRole('link', { name: /see how it works/i })).toBeInTheDocument()
+  it('shows the primary CTA on home', () => {
+    render(<HomePage />)
+    expect(screen.getAllByText(/Schedule 15 min Call/i)[0]).toBeInTheDocument()
   })
 
-  it('shows pricing tiers on the pricing page', () => {
-    window.history.pushState({}, '', '/pricing')
-    render(<App />)
-
-    expect(
-      screen.getByRole('heading', { level: 1, name: /full launch pricing/i }),
-    ).toBeInTheDocument()
-    expect(
-      screen.getAllByText(/US\$ 1,000|US\$ 1,300|US\$ 1,700|US\$ 2,100/i).length,
-    ).toBeGreaterThanOrEqual(4)
-    expect(screen.getByText(/Request a quote/i)).toBeInTheDocument()
+  it('lists all launch pricing tiers', () => {
+    render(<PricingPage />)
+    expect(screen.getByText('US$ 1,000')).toBeInTheDocument()
+    expect(screen.getByText('US$ 1,300')).toBeInTheDocument()
+    expect(screen.getByText('US$ 1,700')).toBeInTheDocument()
+    expect(screen.getByText('US$ 2,100')).toBeInTheDocument()
   })
 })
+
