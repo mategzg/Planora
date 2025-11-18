@@ -8,17 +8,20 @@ import {
   primaryCta,
 } from '@/lib/content'
 
+const quoteMailto =
+  'mailto:planora.testfit@gmail.com?subject=Planora%20%20quote%20request%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AWe%20need%20a%20quote%20for%20a%20space%20above%2020k%20ft%26sup2%3B%20in%20%5BSubmarket%5D.%0D%0ACompany:%20%5BCompany%5D.%20Timeline:%20%5BDate%5D.%0D%0APlease%20advise%20next%20steps.%0D%0A%20[Name],%20[Phone]'
+
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
   description:
-    'Launch pricing for the Planora Full-Stack Preview (2k�20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+    'Launch pricing for the Planora Full-Stack Preview (2k&ndash;20k ft&sup2;): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
   alternates: {
     canonical: 'https://planora-testfit.vercel.app/pricing',
   },
   openGraph: {
     title: 'Pricing | Planora',
     description:
-      'Launch pricing for the Planora Full-Stack Preview (2k�20k ft): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+      'Launch pricing for the Planora Full-Stack Preview (2k&ndash;20k ft&sup2;): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
     url: 'https://planora-testfit.vercel.app/pricing',
     images: ['/og-planora.png'],
   },
@@ -31,7 +34,7 @@ export default function PricingPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Full Launch pricing and add-ons</h1>
         <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
-        <p className="text-sm text-muted">Launch pricing � first 60 days � up to 5 clients</p>
+        <p className="text-sm text-muted">Launch pricing &ndash; first 60 days &ndash; up to 5 clients</p>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (
@@ -40,9 +43,9 @@ export default function PricingPage() {
             className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
           >
             <p className="text-lg font-semibold">{tier.range}</p>
-            {tier.range === '20k+ ft' ? (
+            {tier.range === '20k+ ft&sup2;' ? (
               <a
-                href={primaryCta}
+                href={quoteMailto}
                 className="text-2xl font-bold text-accent underline underline-offset-4"
               >
                 Request a quote
@@ -92,7 +95,7 @@ export default function PricingPage() {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <p className="text-xs text-muted">One revision included  SketchUp on request  50/50 payment  No rush  No Revit.</p>
+        <p className="text-xs text-muted">One revision included · SketchUp on request · 50/50 payment · No rush · No Revit.</p>
       </div>
 
       <div className="flex flex-wrap gap-3">
@@ -113,4 +116,6 @@ export default function PricingPage() {
     </div>
   )
 }
+
+
 

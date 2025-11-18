@@ -3,9 +3,9 @@ import HomePage from '@/app/page'
 import PricingPage from '@/app/pricing/page'
 
 describe('Planora marketing pages', () => {
-  it('renders the home hero headline', () => {
+  it('renders the home hero headline with encoded range', () => {
     render(<HomePage />)
-    expect(screen.getByText(/Full-Stack Preview in 72-96 h/i)).toBeInTheDocument()
+    expect(screen.getByText(/72&ndash;96 h/i)).toBeInTheDocument()
   })
 
   it('shows the primary CTA on home', () => {
@@ -20,5 +20,9 @@ describe('Planora marketing pages', () => {
     expect(screen.getByText('US$ 1,700')).toBeInTheDocument()
     expect(screen.getByText('US$ 2,100')).toBeInTheDocument()
   })
-})
 
+  it('shows individual items with ft² encoding', () => {
+    render(<PricingPage />)
+    expect(screen.getByText(/ft&sup2;/i)).toBeInTheDocument()
+  })
+})
