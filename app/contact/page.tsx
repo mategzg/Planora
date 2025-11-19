@@ -44,7 +44,6 @@ export default function ContactPage() {
             Schedule 15 min Call
           </a>
         </div>
-          <p className="text-xs text-muted">or use the contact form <a href="/contact" className="underline">/contact</a>.</p>
         <div className="lg:col-span-2">
           <ContactForm />
         </div>

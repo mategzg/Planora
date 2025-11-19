@@ -34,7 +34,7 @@ export default function HowItWorksPage() {
           >
             <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               <span>Step {idx + 1}</span>
-              <span>{step.title.includes('T+') ? step.title.split(' ')[0] : '72&ndash;96 h'}</span>
+              <span>{step.title.includes('T+') ? step.title.split(' ')[0] : '72–96 h'}</span>
             </div>
             <h2 className="text-lg font-semibold text-ink">{step.title}</h2>
             <p className="text-sm text-muted">{step.detail}</p>

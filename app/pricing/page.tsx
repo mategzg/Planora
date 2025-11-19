@@ -14,14 +14,14 @@ const quoteMailto =
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
   description:
-    'Launch pricing for the Planora Full-Stack Preview (2k&ndash;20k ft&sup2;): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+    'Launch pricing for the Planora Full-Stack Preview (2k–20k ft²): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
   alternates: {
     canonical: 'https://planora-testfit.vercel.app/pricing',
   },
   openGraph: {
     title: 'Pricing | Planora',
     description:
-      'Launch pricing for the Planora Full-Stack Preview (2k&ndash;20k ft&sup2;): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
+      'Launch pricing for the Planora Full-Stack Preview (2k–20k ft²): fixed tiers, add-ons, and individual items for Miami tenant-rep brokers.',
     url: 'https://planora-testfit.vercel.app/pricing',
     images: ['/og-planora.png'],
   },
@@ -34,7 +34,7 @@ export default function PricingPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Full Launch pricing and add-ons</h1>
         <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
-        <p className="text-sm text-muted">Launch pricing &ndash; first 60 days &ndash; up to 5 clients</p>
+        <p className="text-sm text-muted">Launch pricing – first 60 days – up to 5 clients</p>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (
@@ -43,7 +43,7 @@ export default function PricingPage() {
             className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
           >
             <p className="text-lg font-semibold">{tier.range}</p>
-            {tier.range === '20k+ ft&sup2;' ? (
+            {tier.range === '20k+ ft²' ? (
               <a
                 href={quoteMailto}
                 className="text-2xl font-bold text-accent underline underline-offset-4"
@@ -105,7 +105,6 @@ export default function PricingPage() {
         >
           Schedule 15 min Call
         </a>
-        <p className="text-xs text-muted">or use the contact form <Link href="/contact" className="underline">/contact</Link>.</p>
         <Link
           href="/gift"
           className="rounded-full border border-accent/60 px-5 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:shadow-md"

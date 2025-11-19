@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'], 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-space-grotesk' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['500'], variable: '--font-jetbrains-mono' })
 
-const defaultTitle = 'Planora | Full-Stack office previews in 72&ndash;96 h for Miami brokers'
+const defaultTitle = 'Planora | Full-Stack office previews in 72–96 h for Miami brokers'
 const defaultDescription =
-  'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72&ndash;96 hours for 2k&ndash;20k ft&sup2; deals.'
+  'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72–96 hours for 2k–20k ft² deals.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

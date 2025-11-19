@@ -13,16 +13,16 @@ import {
 } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'Planora | Full-Stack office previews in 72&ndash;96 h for Miami brokers',
+  title: 'Planora | Full-Stack office previews in 72–96 h for Miami brokers',
   description:
-    'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72&ndash;96 hours for 2k&ndash;20k ft&sup2; deals.',
+    'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72–96 hours for 2k–20k ft² deals.',
   alternates: {
     canonical: 'https://planora-testfit.vercel.app/',
   },
   openGraph: {
-    title: 'Planora | Full-Stack office previews in 72&ndash;96 h for Miami brokers',
+    title: 'Planora | Full-Stack office previews in 72–96 h for Miami brokers',
     description:
-      'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72&ndash;96 hours for 2k&ndash;20k ft&sup2; deals.',
+      'Full-Stack office previews for tenant-rep brokers in Miami: one test-fit, clean 2D, two stills, and a 60-second video delivered in 72–96 hours for 2k–20k ft² deals.',
     url: 'https://planora-testfit.vercel.app/',
     images: ['/og-planora.png'],
   },
@@ -34,10 +34,10 @@ export default function HomePage() {
       <section className="grid items-center gap-10 lg:grid-cols-2">
         <div className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            For tenant-rep brokers  Miami  2k&ndash;20k ft&sup2;
+            For tenant-rep brokers  Miami  2k–20k ft²
           </p>
           <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Close faster with a Full-Stack Preview in 72&ndash;96 h
+            Close faster with a Full-Stack Preview in 72–96 h
           </h1>
           <p className="max-w-2xl text-lg text-muted">
             One decision-ready option: test-fit, clean 2D, two stills, and a 60-second video-built for tenant-rep deals in Miami's key submarkets.
@@ -48,7 +48,6 @@ export default function HomePage() {
               className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Schedule 15 min Call
-          <p className="text-xs text-muted">or use the contact form <Link href="/contact" className="underline">/contact</Link>.</p>
             </a>
             <Link
               href="/how-it-works"
@@ -57,7 +56,6 @@ export default function HomePage() {
               See how it works
             </Link>
           </div>
-          <p className="text-xs text-muted">or use the contact form <Link href="/contact" className="underline">/contact</Link>.</p>
           <p className="text-sm text-muted">Not for construction. No permit/seal. Schematic only.</p>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -89,7 +87,7 @@ export default function HomePage() {
       <section id="what-you-get" className="space-y-4">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Outputs</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">What you get in 72&ndash;96 hours</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">What you get in 72–96 hours</h2>
           <p className="max-w-3xl text-muted">One Full-Stack Preview. Four deal-ready outputs.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
@@ -159,7 +157,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
             <h3 className="text-lg font-semibold">Mid-ticket office deals</h3>
-            <p className="mt-2 text-sm text-muted">2k&ndash;20k ft&sup2; in Doral, Blue Lagoon, Coral Gables, Brickell, Kendall, South Broward.</p>
+            <p className="mt-2 text-sm text-muted">2k–20k ft² in Doral, Blue Lagoon, Coral Gables, Brickell, Kendall, South Broward.</p>
           </div>
         </div>
       </section>
@@ -167,7 +165,7 @@ export default function HomePage() {
       <section id="pricing" className="space-y-4">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Pricing for 2k&ndash;20k ft&sup2; offices</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">Pricing for 2k–20k ft² offices</h2>
           <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
