@@ -43,7 +43,7 @@ export function SiteHeader() {
         </nav>
 
         <QuoteFormButton className="rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:brightness-95">
-          Get a custom quote
+          Schedule 15 min Call
         </QuoteFormButton>
       </div>
     </header>

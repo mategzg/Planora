@@ -75,7 +75,7 @@ export default function QuoteForm({ onClose }: QuoteFormProps) {
         ) : (
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">Get a custom quote</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">Schedule 15 min Call</p>
               <h3 className="mt-2 text-2xl font-semibold text-ink">Share the basics and we'll reply in under 2 hours.</h3>
             </div>
 

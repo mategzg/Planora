@@ -34,7 +34,7 @@ export function HomeHero({ proofPoints }: { proofPoints: ProofPoint[] }) {
               onClick={openForm}
               className="bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Get a custom quote
+              Schedule 15 min Call
             </button>
             <button
               type="button"

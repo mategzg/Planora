@@ -38,7 +38,7 @@ export default function ContactPage() {
           <p className="text-sm text-muted">WhatsApp: +51 987 790 457</p>
           <p className="text-sm text-muted">We respond within one business day.</p>
           <QuoteFormButton className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
-            Get a custom quote + schedule call
+            Schedule 15 min Call + schedule call
           </QuoteFormButton>
         </div>
         <div className="lg:col-span-2">

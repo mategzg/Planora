@@ -107,7 +107,7 @@ export default function PricingPage() {
 
       <div className="flex flex-wrap gap-3">
         <QuoteFormButton className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
-          Get a custom quote
+          Schedule 15 min Call
         </QuoteFormButton>
         <Link
           href="/gift"
