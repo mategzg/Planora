@@ -29,11 +29,9 @@ export default function PricingPage() {
         <p className="text-sm text-muted">Launch pricing – first 60 days – up to 5 clients</p>
       </header>
 
-      <div className="bg-alert/10 border-l-4 border-alert rounded-r-lg p-5 max-w-3xl mx-auto">
-        <p className="text-base text-center">
-          <strong className="text-ink">Launch pricing expires Dec 31, 2025.</strong> Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
-        </p>
-      </div>
+      <p className="rounded-2xl border border-accent/15 bg-paper/70 px-4 py-3 text-sm text-muted text-center italic">
+        Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+      </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (

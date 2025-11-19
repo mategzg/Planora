@@ -204,11 +204,9 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-ink">Pricing for 2k–20k ft² offices</h2>
           <p className="text-lg md:text-xl text-muted">Fixed-scope pricing by square footage. One package, no surprises, no hourly rates.</p>
         </div>
-        <div className="bg-alert/10 border-l-4 border-alert rounded-r-lg p-5 mb-4 max-w-3xl mx-auto">
-          <p className="text-base text-center">
-            <strong className="text-ink">Launch pricing expires Dec 31, 2025.</strong> Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
-          </p>
-        </div>
+        <p className="text-sm text-muted italic border border-accent/15 bg-paper/70 px-5 py-3 rounded-2xl max-w-3xl">
+          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
             <div key={tier.range} className="rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
