@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <QuoteFormProvider>
           <div className="min-h-screen bg-soft text-ink">
             <SiteHeader />
-            <main className="mx-auto max-w-6xl px-6 pb-20 pt-12">{children}</main>
+            <main className="mx-auto max-w-6xl px-6 pb-20 pt-8 md:pt-12">{children}</main>
             <SiteFooter />
           </div>
         </QuoteFormProvider>
