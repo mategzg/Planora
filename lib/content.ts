@@ -83,7 +83,7 @@ export const pricingTiers = [
   { range: '5–10k ft²', price: 'US$ 1,300', note: 'Launch' },
   { range: '10–15k ft²', price: 'US$ 1,700', note: 'Launch' },
   { range: '15–20k ft²', price: 'US$ 2,100', note: 'Launch' },
-  { range: '20k+ ft²', price: 'Request a quote', note: 'Scope review' },
+  { range: '20k+ ft²', price: 'Request a quote' },
 ]
 
 export const pricingConditions = [
