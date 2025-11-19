@@ -45,7 +45,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <a
               href={primaryCta}
-              className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Schedule 15 min Call
             </a>
@@ -119,7 +119,7 @@ export default function HomePage() {
               className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-ink">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accentFill/10 text-white">
                   {idx + 1}
                 </span>
                 Step {idx + 1}
@@ -182,7 +182,7 @@ export default function HomePage() {
         <p className="text-sm text-muted">One revision included  SketchUp on request  50/50 payment  No rush  No Revit.</p>
         <Link
           href="/pricing"
-          className="inline-flex w-fit rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
         >
           See full pricing & add-ons
         </Link>
@@ -203,7 +203,7 @@ export default function HomePage() {
         </ul>
         <Link
           href="/gift"
-          className="inline-flex w-fit rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
         >
           Get 2 images in 48 h
         </Link>
@@ -259,7 +259,7 @@ export default function HomePage() {
         </div>
         <Link
           href="/faq"
-          className="inline-flex w-fit rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
         >
           See full FAQ
         </Link>
@@ -276,7 +276,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <a
               href={primaryCta}
-              className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Schedule 15 min Call
             </a>

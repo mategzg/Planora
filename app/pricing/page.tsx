@@ -100,7 +100,7 @@ export default function PricingPage() {
       <div className="flex flex-wrap gap-3">
         <a
           href={primaryCta}
-          className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Schedule 15 min Call
         </a>

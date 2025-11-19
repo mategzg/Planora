@@ -97,7 +97,7 @@ export function ContactForm() {
       )}
       <button
         type="submit"
-        className="w-full rounded-full bg-accent px-4 py-3 text-sm font-semibold text-ink shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+        className="w-full rounded-full bg-accentFill px-4 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl"
       >
         Submit and show success
       </button>

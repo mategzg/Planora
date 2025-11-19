@@ -39,7 +39,7 @@ export default function ContactPage() {
           <p className="text-sm text-muted">We respond within one business day.</p>
           <a
             href={primaryCta}
-            className="inline-flex w-fit rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
           >
             Schedule 15 min Call
           </a>

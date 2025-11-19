@@ -112,7 +112,7 @@ export const addOns = [
 ]
 
 export const individualItems = [
-  { title: 'Test-fit only', price: 'US$ 0.12/ft² (min US$ 600)' },
+  { title: 'Test-fit only', price: 'US$ 0.12/ft (min US$ 600)' },
   { title: 'Single render', price: 'US$ 400' },
   { title: '60-second video only', price: 'US$ 1,000' },
 ]
