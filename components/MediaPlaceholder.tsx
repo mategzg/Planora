@@ -1,6 +1,3 @@
-import type { LucideIcon } from 'lucide-react'
-import { FileText, Image as ImageIcon, Play } from 'lucide-react'
-
 type MediaPlaceholderProps = {
   label: string
   aspect?: string
@@ -8,31 +5,32 @@ type MediaPlaceholderProps = {
   icon?: 'plan' | 'image' | 'video'
 }
 
-const icons: Record<string, LucideIcon> = {
-  plan: FileText,
-  image: ImageIcon,
-  video: Play,
+const symbolMap: Record<string, string> = {
+  plan: '📄',
+  image: '🖼',
+  video: '▶',
 }
 
-export function MediaPlaceholder({ label, aspect = 'aspect-[16/9]', className = '', icon = 'image' }: MediaPlaceholderProps) {
-  const Icon = icons[icon] ?? FileText
+export function MediaPlaceholder({ label, aspect = 'aspect-video', className = '', icon = 'image' }: MediaPlaceholderProps) {
+  const symbol = symbolMap[icon] ?? symbolMap.plan
 
   return (
     <div
-      className={`${aspect} relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-ink via-slate-900 to-ink shadow-inner ${className}`.trim()}
+      className={`${aspect} relative overflow-hidden rounded-2xl border border-accent/10 bg-gradient-to-br from-soft via-soft to-accent/5 ${className}`.trim()}
       aria-label={label}
     >
-      <div className="absolute inset-0 opacity-40">
-        <div className="h-full w-full bg-[radial-gradient(circle_at_30%_20%,rgba(23,195,206,0.35),transparent_60%)]" />
-      </div>
-      <div className="relative flex h-full flex-col justify-between p-5 text-paper">
-        <div className="flex items-center gap-3">
-          <span className="rounded-full bg-white/15 p-2 text-accent">
-            <Icon className="h-5 w-5" />
-          </span>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Preview asset</p>
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: 'linear-gradient(#17C3CE 1px, transparent 1px), linear-gradient(90deg, #17C3CE 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+      <div className="relative flex h-full flex-col items-center justify-center p-6 text-center transition-all duration-300">
+        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full border border-accent/20 bg-white/80 text-3xl">
+          {symbol}
         </div>
-        <p className="text-sm font-semibold text-white/90">{label}</p>
+        <p className="text-sm font-medium text-muted">{label}</p>
       </div>
     </div>
   )

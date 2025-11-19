@@ -78,7 +78,7 @@ export default function HomePage() {
     <div className="space-y-16">
       <HomeHero proofPoints={proofPoints} />
 
-      <section className="space-y-8 rounded-3xl bg-paper p-8 shadow-sm">
+      <section className="py-20 md:py-28 space-y-8 rounded-3xl bg-paper p-8 shadow-sm">
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Why Planora</p>
           <h2 className="text-3xl font-semibold text-ink">Why brokers choose Planora over traditional architects</h2>
@@ -90,7 +90,7 @@ export default function HomePage() {
           {whyPlanoraItems.map((item) => {
             const Icon = item.icon
             return (
-              <article key={item.title} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <article key={item.title} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
                 <div className="flex items-center gap-3">
                   <span className="rounded-full bg-accent/10 p-3 text-accent">
                     <Icon className="h-5 w-5" />
@@ -125,7 +125,7 @@ export default function HomePage() {
             return (
               <article
                 key={item.title}
-                className="rounded-xl border border-muted/20 bg-paper p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
+                className="bg-paper rounded-xl p-8 border border-muted/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="rounded-2xl bg-soft p-3 text-accent">
@@ -177,7 +177,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="py-20 md:py-28 space-y-4">
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Who it's for</p>
           <h2 className="text-3xl font-semibold text-ink">Who it's for</h2>
@@ -198,21 +198,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="pricing" className="space-y-6">
-        <div className="space-y-2">
+            <section id="pricing" className="py-20 md:py-28 space-y-8">
+        <div className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Pricing</p>
-          <h2 className="text-3xl font-semibold text-ink">Pricing for 2k–20k ft² offices</h2>
-          <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-ink">Pricing for 2k–20k ft² offices</h2>
+          <p className="text-lg md:text-xl text-muted">Fixed-scope pricing by square footage. One package, no surprises, no hourly rates.</p>
         </div>
-        <p className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 px-4 py-3 text-sm text-ink">
-          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
-        </p>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="bg-alert/10 border-l-4 border-alert rounded-r-lg p-5 mb-4 max-w-3xl mx-auto">
+          <p className="text-base text-center">
+            <strong className="text-ink">Launch pricing expires Dec 31, 2025.</strong> Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+          </p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
-            <div key={tier.range} className="rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
+            <div key={tier.range} className="rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               {tier.note && tier.note !== 'Launch' && (
-              <span className="mb-3 inline-flex rounded-full bg-soft px-3 py-1 text-xs font-semibold text-accent">{tier.note}</span>
-            )}
+                <span className="mb-3 inline-flex rounded-full bg-soft px-3 py-1 text-xs font-semibold text-accent">{tier.note}</span>
+              )}
               <p className="text-lg font-semibold">{tier.range}</p>
               {tier.range === '20k+ ft²' ? (
                 <div className="mt-3 space-y-3">
@@ -227,16 +229,16 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">What's included at every tier</p>
-          <ul className="grid gap-3 sm:grid-cols-2">
+        <div className="mt-12 max-w-4xl mx-auto bg-soft rounded-xl p-8 border border-muted/10">
+          <h3 className="font-semibold text-lg mb-6 text-center">What's included at every tier:</h3>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-3 text-base">
             {pricingInclusions.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm text-muted">
-                <BadgeCheck className="h-5 w-5 text-accent" />
-                {item}
-              </li>
+              <div key={item} className="flex items-start gap-3">
+                <span className="text-accent text-xl mt-0.5">✓</span>
+                <span>{item}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <Link
           href="/pricing"
@@ -246,39 +248,42 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <section id="gift" className="space-y-6 rounded-3xl bg-ink px-6 py-8 text-paper shadow-xl">
-        <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Gift</p>
-          <h2 className="text-3xl font-semibold">Not ready for the full package? Start with 2 free style images in 48h</h2>
-          <p className="max-w-3xl text-soft">Perfect for testing our quality before a live deal—or refreshing a stale listing with zero risk.</p>
+            <section id="gift" className="py-20 md:py-24 bg-gradient-to-br from-soft to-accent/5">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Not ready for the full package? Start with 2 free style images in 48h
+          </h2>
+          <p className="text-lg md:text-xl text-muted mb-10 max-w-2xl mx-auto">
+            Perfect for testing our quality before a live deal—or refreshing a stale listing with zero risk.
+          </p>
+          <div className="bg-paper rounded-xl p-8 mb-8 text-left max-w-2xl mx-auto border border-accent/20 shadow-md">
+            <h3 className="font-semibold text-lg mb-6">What you'll get:</h3>
+            <ul className="space-y-4 text-base">
+              <li className="flex items-start gap-3">
+                <span className="text-accent text-xl mt-0.5">✓</span>
+                <span><strong>2 AI-assisted images</strong> showing your client's preferred style (Modern Minimal, Tech Chic, or Warm Contemporary) applied to a generic office shell</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent text-xl mt-0.5">✓</span>
+                <span><strong>48-hour delivery</strong>—no plan needed, just tell us the vibe</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent text-xl mt-0.5">✓</span>
+                <span><strong>One per company</strong> (we trust Miami brokers—this is about building relationships, not gatekeeping)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent text-xl mt-0.5">✓</span>
+                <span className="text-muted">Subtle watermark (removable if you upgrade to Full-Stack Preview)</span>
+              </li>
+            </ul>
+          </div>
+          <Link
+            href="/gift"
+            className="inline-block bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            Claim your free images
+          </Link>
         </div>
-        <div className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-soft">What you'll get</p>
-          <ul className="space-y-3 text-sm text-soft">
-            <li className="flex items-start gap-3">
-              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              2 AI-assisted images showing your client's preferred style (Modern Minimal, Tech Chic, or Warm Contemporary) applied to a generic office shell
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              48-hour delivery—no plan needed, just tell us the vibe
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              One per company (we trust Miami brokers—this is about building relationships, not gatekeeping)
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              Subtle watermark (removable if you upgrade to Full-Stack Preview)
-            </li>
-          </ul>
-        </div>
-        <Link
-          href="/gift"
-          className="inline-block rounded-full bg-accentFill px-8 py-4 text-base font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-        >
-          Claim your free images
-        </Link>
       </section>
 
       <section id="cases" className="space-y-4">
@@ -319,7 +324,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="py-20 md:py-28 space-y-4">
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Quick answers</p>
           <h2 className="text-3xl font-semibold text-ink">Quick answers for busy brokers</h2>

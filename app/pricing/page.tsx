@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { QuoteFormButton } from '@/components/QuoteFormButton'
 import { addOns, individualItems, pricingConditions, pricingTiers, pricingInclusions } from '@/lib/content'
-import { BadgeCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
@@ -22,21 +21,25 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
       <header className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Pricing</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">Full Launch pricing and add-ons</h1>
-        <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
+        <h1 className="text-3xl md:text-4xl font-bold">Full Launch pricing and add-ons</h1>
+        <p className="text-lg text-muted">Fixed-scope pricing by square footage. One package, no surprises, no hourly rates.</p>
         <p className="text-sm text-muted">Launch pricing – first 60 days – up to 5 clients</p>
-        <p className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 px-4 py-3 text-sm text-ink">
-          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
-        </p>
       </header>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div className="bg-alert/10 border-l-4 border-alert rounded-r-lg p-5 max-w-3xl mx-auto">
+        <p className="text-base text-center">
+          <strong className="text-ink">Launch pricing expires Dec 31, 2025.</strong> Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+        </p>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (
           <div
             key={tier.range}
-            className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
+            className="rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg"
           >
             {tier.note && tier.note !== 'Launch' && (
               <span className="mb-3 inline-flex rounded-full bg-soft px-3 py-1 text-xs font-semibold text-accent">{tier.note}</span>
@@ -56,27 +59,24 @@ export default function PricingPage() {
         ))}
       </div>
 
-      <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">What's included at every tier</p>
-        <ul className="grid gap-3 sm:grid-cols-2">
+      <div className="mt-4 max-w-4xl mx-auto bg-soft rounded-xl p-8 border border-muted/10">
+        <h3 className="font-semibold text-lg mb-6 text-center">What's included at every tier:</h3>
+        <div className="grid md:grid-cols-2 gap-x-10 gap-y-3 text-base">
           {pricingInclusions.map((item) => (
-            <li key={item} className="flex items-center gap-3 text-sm text-muted">
-              <BadgeCheck className="h-5 w-5 text-accent" />
-              {item}
-            </li>
+            <div key={item} className="flex items-start gap-3">
+              <span className="text-accent text-xl mt-0.5">✓</span>
+              <span>{item}</span>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
+      <div className="grid gap-6 md:grid-cols-2">
+        <div className="space-y-3 rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
           <h2 className="text-xl font-semibold text-ink">Add-ons</h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-sm text-muted">
             {addOns.map((add) => (
-              <li
-                key={add.title}
-                className="flex items-start justify-between gap-3 text-sm text-muted"
-              >
+              <li key={add.title} className="flex items-start justify-between gap-3">
                 <div>
                   <p className="font-semibold text-ink">{add.title}</p>
                   <p>{add.detail}</p>
@@ -86,11 +86,11 @@ export default function PricingPage() {
             ))}
           </ul>
         </div>
-        <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
+        <div className="space-y-3 rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
           <h2 className="text-xl font-semibold text-ink">Individual items</h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-sm text-muted">
             {individualItems.map((item) => (
-              <li key={item.title} className="flex items-center justify-between text-sm text-muted">
+              <li key={item.title} className="flex items-center justify-between">
                 <span className="font-semibold text-ink">{item.title}</span>
                 <span className="text-sm font-semibold text-ink">{item.price}</span>
               </li>
@@ -99,14 +99,13 @@ export default function PricingPage() {
         </div>
       </div>
 
-      <div className="space-y-2 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
+      <div className="space-y-2 rounded-2xl border border-muted/20 bg-paper p-6 shadow-sm">
         <h2 className="text-xl font-semibold text-ink">Conditions</h2>
         <ul className="list-disc space-y-1 pl-5 text-sm text-muted">
           {pricingConditions.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <p className="text-xs text-muted">One revision included · SketchUp on request · 50/50 payment</p>
       </div>
 
       <div className="flex flex-wrap gap-3">

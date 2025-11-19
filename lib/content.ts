@@ -53,7 +53,7 @@ export const offeringItems = [
   {
     title: '60-second video',
     description:
-      'A walkthrough edited for how brokers actually pitch: email attachments, investor calls, and landlord updates.',
+      'A walkthrough edited for how brokers actually pitch: email attachments, quick client calls, and landlord updates.',
     icon: 'video',
   },
 ]

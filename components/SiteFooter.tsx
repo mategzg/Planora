@@ -4,8 +4,8 @@ import { navItems } from '@/lib/content'
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-slate-200 bg-paper py-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-slate-200 bg-paper">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3 text-muted">
           <Link href="/" className="flex items-center" aria-label="Planora home">
             <Image src="/logo-planora.png" alt="Planora" width={180} height={44} className="h-11 w-auto object-contain" />
@@ -26,9 +26,11 @@ export function SiteFooter() {
             LinkedIn
           </a>
         </div>
-        <p className="text-xs text-muted">Built by architecture graduates who understand how deals actually move.</p>
-        <div className="text-xs text-muted">(c) 2025 Planora. All rights reserved.</div>
       </div>
+      <div className="border-t border-muted/10 text-center px-6 pt-8 pb-4">
+        <p className="text-sm text-muted">Built by architecture graduates who understand how deals actually move.</p>
+      </div>
+      <div className="text-center pb-6 text-xs text-muted">© 2025 Planora. All rights reserved.</div>
     </footer>
   )
 }
