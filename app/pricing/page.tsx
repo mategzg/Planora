@@ -8,8 +8,7 @@ import {
   primaryCta,
 } from '@/lib/content'
 
-const quoteMailto =
-  'mailto:planora.testfit@gmail.com?subject=Planora%20%20quote%20request%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AWe%20need%20a%20quote%20for%20a%20space%20above%2020k%20ft%26sup2%3B%20in%20%5BSubmarket%5D.%0D%0ACompany:%20%5BCompany%5D.%20Timeline:%20%5BDate%5D.%0D%0APlease%20advise%20next%20steps.%0D%0A%20[Name],%20[Phone]'
+const quoteMailto = 'mailto:planora.testfit@gmail.com?subject=Planora%20%20quote%20request%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AWe%20need%20a%20quote%20for%20a%20space%20above%2020k%20ft%20in%20%5BSubmarket%5D.%0D%0ACompany:%20%5BCompany%5D.%20Timeline:%20%5BDate%5D.%0D%0APlease%20advise%20next%20steps.%0D%0A%20[Name],%20[Phone]';
 
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
