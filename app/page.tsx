@@ -179,7 +179,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted">One revision included  SketchUp on request  50/50 payment  No rush  No Revit.</p>
+        <p className="text-sm text-muted">One revision included  SketchUp on request  50/50 payment</p>
         <Link
           href="/pricing"
           className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"

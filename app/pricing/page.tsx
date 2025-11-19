@@ -94,7 +94,7 @@ export default function PricingPage() {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <p className="text-xs text-muted">One revision included · SketchUp on request · 50/50 payment · No rush · No Revit.</p>
+        <p className="text-xs text-muted">One revision included · SketchUp on request · 50/50 payment</p>
       </div>
 
       <div className="flex flex-wrap gap-3">

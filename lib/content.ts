@@ -88,7 +88,7 @@ export const pricingConditions = [
   'Scope: 1 test-fit, 1 clean 2D plan (PDF A3), 1 section/axonometric, 2 JPG stills, 1x60s MP4, schematic only.',
   'One revision included; SketchUp 3D model available on request; no Revit export.',
   'Delivery window 72–96 h from intake completion; no 48h rush option in public offer.',
-  'Payment: 50/50 (deposit + delivery). Currency always shown as US$.',
+  'Payment: 50/50 (deposit + delivery).',
   'Not for construction or permitting; tenant-facing and landlord-ready preview materials.',
   'File formats: PDF A3, DWG, 2x JPG stills, 1x MP4 video with subtle brand overlay.',
 ]
@@ -210,7 +210,7 @@ export const faqs = [
     answer: 'Yes: extra test-fit, extra render, and +30s video as listed on the pricing page.',
   },
   { question: 'How is payment handled?', answer: '50/50 (deposit + delivery), invoiced in US$.' },
-  { question: 'Can I request a SketchUp model?', answer: 'Yes, on request. No Revit export.' },
+  { question: 'Can I request a SketchUp model?', answer: 'Yes, on request.' },
 ]
 
 export const submarkets = [
