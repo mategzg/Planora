@@ -19,8 +19,8 @@ export function HomeHero({ proofPoints }: { proofPoints: ProofPoint[] }) {
   }
 
   return (
-    <section className="min-h-[85vh] py-20 md:py-28">
-      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <section className="min-h-[85vh] pt-12 pb-16 md:pt-28 md:pb-28">
+      <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:items-center md:gap-16">
         <div>
           <p className="text-xs uppercase tracking-wider text-accent font-medium mb-4">{eyebrowText}</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-ink mb-6">
@@ -60,7 +60,7 @@ export function HomeHero({ proofPoints }: { proofPoints: ProofPoint[] }) {
           </div>
         </div>
 
-        <div className="order-first lg:order-last">
+        <div className="mt-8 md:mt-0">
           <div className="relative overflow-hidden rounded-3xl border border-accent/10 bg-gradient-to-br from-soft via-soft to-accent/10 shadow-2xl">
             <div
               className="absolute inset-0 opacity-[0.04]"
