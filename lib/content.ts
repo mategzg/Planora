@@ -1,6 +1,4 @@
-﻿export const SITE_URL = 'https://planora-testfit.vercel.app'
-
-export const primaryCta = 'mailto:planora.testfit@gmail.com?subject=Planora%20%2015%20min%20call%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%20range%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AI%27m%20a%20tenant-rep%20broker%20in%20%5BSubmarket%5D.%20Deal%20size:%20%5BFt%20range%5D.%0D%0ATarget%20timeline:%20%5BDate%5D.%20Company:%20%5BCompany%5D.%0D%0APlease%20confirm%20a%20slot%20for%20a%2015-min%20pre-flight%20call.%0D%0A%20%5BName%5D,%20%5BPhone%5D'
+export const SITE_URL = 'https://planora-testfit.vercel.app'
 
 export type NavItem = {
   label: string
@@ -38,20 +36,25 @@ export const offeringItems = [
   {
     title: 'Test-fit option',
     description:
-      'One clear layout with basic ratios, adjacencies, and notes for tenant reps and their clients.',
+      'One clear layout your tenant can understand in 60 seconds—no architecture jargon, just ratios and adjacencies that help them decide.',
+    icon: 'layout',
   },
   {
     title: 'Clean 2D plan + section/axo',
-    description: 'A readable plan and one simple section or axo you can drop into decks and emails.',
+    description: 'A readable plan and simple section you can drop into emails and decks without explanation.',
+    icon: 'plan',
   },
   {
     title: 'Two still images',
-    description: 'Tenant-friendly stills that show space, light, and mood without overselling.',
+    description:
+      'Tenant-friendly stills that show space, light, and mood—realistic enough to move the deal, not so polished they raise budget expectations.',
+    icon: 'image',
   },
   {
     title: '60-second video',
     description:
-      'A short walkthrough tailored to how brokers actually pitch: email, calls, landlord updates.',
+      'A walkthrough edited for how brokers actually pitch: email attachments, investor calls, and landlord updates.',
+    icon: 'video',
   },
 ]
 
@@ -85,12 +88,19 @@ export const pricingTiers = [
 
 export const pricingConditions = [
   'Launch pricing (public) for Miami tenant-rep office previews (2k–20k ft²); >20k by quote.',
-  'Scope: 1 test-fit, 1 clean 2D plan (PDF A3), 1 section/axonometric, 2 JPG stills, 1x60s MP4, schematic only.',
-  'One revision included; SketchUp 3D model available on request; no Revit export.',
-  'Delivery window 72–96 h from intake completion; no 48h rush option in public offer.',
+  'Scope: 1 test-fit, 1 clean 2D plan (PDF A3), 1 section/axonometric, 2 JPG stills, 1×60s MP4, schematic only.',
+  'One revision included; SketchUp 3D model available on request.',
+  'Delivery window 72–96 h from intake completion.',
   'Payment: 50/50 (deposit + delivery).',
   'Not for construction or permitting; tenant-facing and landlord-ready preview materials.',
-  'File formats: PDF A3, DWG, 2x JPG stills, 1x MP4 video with subtle brand overlay.',
+  'File formats: PDF A3, DWG, 2× JPG stills, 1× MP4 video with subtle brand overlay.',
+]
+
+export const pricingInclusions = [
+  'One revision included',
+  'SketchUp 3D model on request',
+  '50/50 payment (deposit + delivery)',
+  '72–96h delivery from pre-flight call',
 ]
 
 export const addOns = [
@@ -112,7 +122,7 @@ export const addOns = [
 ]
 
 export const individualItems = [
-  { title: 'Test-fit only', price: 'US$ 0.12/ft (min US$ 600)' },
+  { title: 'Test-fit only', price: 'US$ 0.12/ft² (min US$ 600)' },
   { title: 'Single render', price: 'US$ 400' },
   { title: '60-second video only', price: 'US$ 1,000' },
 ]
@@ -164,7 +174,7 @@ export const quickFaqs = [
   },
   {
     question: 'Is this for construction?',
-    answer: 'No. All outputs are schematic only-no permit/seal.',
+    answer: 'No. All outputs are schematic only—no permit/seal.',
   },
 ]
 
@@ -185,7 +195,7 @@ export const faqs = [
   },
   {
     question: 'How do you price footage?',
-    answer: 'Public Launch tiers cover 2k–20k ft². >20k ft is quoted after a quick scope review.',
+    answer: 'Public Launch tiers cover 2k–20k ft². >20k ft² is quoted after a quick scope review.',
   },
   {
     question: 'Can you work under NDA?',
@@ -198,7 +208,7 @@ export const faqs = [
   },
   {
     question: 'Is this for construction or permitting?',
-    answer: 'No. Schematic only-no permit/seal, no MEP, no CD set.',
+    answer: 'No. Schematic only—no permit/seal, no MEP, no CD set.',
   },
   {
     question: 'Which submarkets do you focus on?',
@@ -226,19 +236,3 @@ export const submarkets = [
 export const ftRanges = ['2–5k ft²', '5–10k ft²', '10–15k ft²', '15–20k ft²', '20k+ ft²']
 
 export const giftStyles = ['Modern Minimal', 'Tech Chic', 'Warm Contemporary']
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

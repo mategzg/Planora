@@ -1,6 +1,6 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
+import { QuoteFormButton } from '@/components/QuoteFormButton'
 import { ContactForm } from '@/components/forms/ContactForm'
-import { primaryCta } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'Contact | Planora',
@@ -22,7 +22,7 @@ export default function ContactPage() {
   return (
     <div className="space-y-8">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Contact</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Contact</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Tell us about the deal and timeline</h1>
         <p className="max-w-3xl text-muted">
           Share the submarket, ft range, and key dates. We'll tell you if a Full-Stack Preview fits and when we can deliver.
@@ -37,12 +37,9 @@ export default function ContactPage() {
           </a>
           <p className="text-sm text-muted">WhatsApp: +51 987 790 457</p>
           <p className="text-sm text-muted">We respond within one business day.</p>
-          <a
-            href={primaryCta}
-            className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            Schedule 15 min Call
-          </a>
+          <QuoteFormButton className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+            Get a custom quote
+          </QuoteFormButton>
         </div>
         <div className="lg:col-span-2">
           <ContactForm />
@@ -51,6 +48,3 @@ export default function ContactPage() {
     </div>
   )
 }
-
-
-

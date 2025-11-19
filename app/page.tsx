@@ -1,16 +1,61 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MediaPlaceholder } from '@/components/MediaPlaceholder'
+import { HomeHero } from '@/components/HomeHero'
+import { QuoteFormButton } from '@/components/QuoteFormButton'
 import {
   caseStudies,
   offeringItems,
   pricingTiers,
-  primaryCta,
   proofPoints,
   qaChips,
   quickFaqs,
   steps,
+  pricingInclusions,
 } from '@/lib/content'
+import type { LucideIcon } from 'lucide-react'
+import { BadgeCheck, GaugeCircle, Image as ImageIcon, Layers, LayoutDashboard, Ruler, Video, Zap } from 'lucide-react'
+
+const whyPlanoraItems: {
+  title: string
+  traditionalLabel: string
+  traditional: string
+  planoraLabel: string
+  planora: string
+  icon: LucideIcon
+}[] = [
+  {
+    title: 'Speed that matches deal velocity',
+    traditionalLabel: 'Traditional architects',
+    traditional: '2–3 weeks',
+    planoraLabel: 'Planora Full-Stack',
+    planora: '72–96 hours',
+    icon: Zap,
+  },
+  {
+    title: 'Transparent pricing, no surprises',
+    traditionalLabel: 'Traditional',
+    traditional: 'Hourly rates + revision fees',
+    planoraLabel: 'Planora',
+    planora: 'Fixed price, 1 revision included',
+    icon: GaugeCircle,
+  },
+  {
+    title: 'Built specifically for deals',
+    traditionalLabel: 'Traditional',
+    traditional: 'Over-designed for construction',
+    planoraLabel: 'Planora',
+    planora: 'Just enough to close, nothing more',
+    icon: Layers,
+  },
+]
+
+const deliverableIcons: Record<string, LucideIcon> = {
+  layout: Ruler,
+  plan: LayoutDashboard,
+  image: ImageIcon,
+  video: Video,
+}
 
 export const metadata: Metadata = {
   title: 'Planora | Full-Stack office previews in 72–96 h for Miami brokers',
@@ -31,85 +76,76 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="grid items-center gap-10 lg:grid-cols-2">
-        <div className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            For tenant-rep brokers  Miami  2k–20k ft²
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Close faster with a Full-Stack Preview in 72–96 h
-          </h1>
-          <p className="max-w-2xl text-lg text-muted">
-            One decision-ready option: test-fit, clean 2D, two stills, and a 60-second video-built for tenant-rep deals in Miami's key submarkets.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={primaryCta}
-              className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              Schedule 15 min Call
-            </a>
-            <Link
-              href="/how-it-works"
-              className="rounded-full border border-accent/60 px-5 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              See how it works
-            </Link>
-          </div>
-          <p className="text-sm text-muted">Not for construction. No permit/seal. Schematic only.</p>
+      <HomeHero proofPoints={proofPoints} />
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {proofPoints.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl border border-slate-200 bg-paper p-4 shadow-sm"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{item.label}</p>
-                <p className="mt-2 text-xl font-semibold text-ink">{item.value}</p>
-                <p className="mt-1 text-sm text-muted">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+      <section className="space-y-8 rounded-3xl bg-paper p-8 shadow-sm">
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Why Planora</p>
+          <h2 className="text-3xl font-semibold text-ink">Why brokers choose Planora over traditional architects</h2>
+          <p className="max-w-3xl text-muted">
+            We're not a full-service firm. We're a specialized preview service built for mid-ticket office deals.
+          </p>
         </div>
-
-        <div className="group relative overflow-hidden rounded-2xl shadow-md">
-          <MediaPlaceholder label="Demo - Full-Stack Preview 60s" />
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center transition duration-200 group-hover:scale-105">
-            <div className="h-14 w-14 rounded-full bg-ink/70 text-paper shadow-lg transition duration-200 group-hover:scale-105">
-              <svg viewBox="0 0 24 24" fill="none" className="h-full w-full p-4">
-                <path d="M8 5v14l11-7-11-7Z" fill="currentColor" />
-              </svg>
-            </div>
-          </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {whyPlanoraItems.map((item) => {
+            const Icon = item.icon
+            return (
+              <article key={item.title} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="rounded-full bg-accent/10 p-3 text-accent">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <p className="text-lg font-semibold text-ink">{item.title}</p>
+                </div>
+                <div className="space-y-3 text-sm font-medium text-ink">
+                  <div className="rounded-2xl border border-muted/40 bg-soft px-4 py-3">
+                    <p className="text-xs uppercase text-muted">{item.traditionalLabel}</p>
+                    <p>{item.traditional}</p>
+                  </div>
+                  <div className="rounded-2xl border border-accent/40 bg-white px-4 py-3 shadow-sm">
+                    <p className="text-xs uppercase text-accent">{item.planoraLabel}</p>
+                    <p>{item.planora}</p>
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </section>
 
-      <section id="what-you-get" className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Outputs</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">What you get in 72–96 hours</h2>
+      <section id="what-you-get" className="space-y-6">
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Outputs</p>
+          <h2 className="text-3xl font-semibold text-ink">What you get in 72–96 hours</h2>
           <p className="max-w-3xl text-muted">One Full-Stack Preview. Four deal-ready outputs.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          {offeringItems.map((item) => (
-            <article
-              key={item.title}
-              className="group rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted">{item.description}</p>
-            </article>
-          ))}
+          {offeringItems.map((item) => {
+            const Icon = deliverableIcons[item.icon] ?? BadgeCheck
+            return (
+              <article
+                key={item.title}
+                className="rounded-xl border border-muted/20 bg-paper p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="rounded-2xl bg-soft p-3 text-accent">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">Deliverable</p>
+                </div>
+                <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted">{item.description}</p>
+              </article>
+            )
+          })}
         </div>
-        <p className="text-sm text-muted">
-          Formats: PDF (A3), DWG, 2 JPG, 1 MP4 - Not for construction. No permit/seal.
-        </p>
+        <p className="text-sm text-muted">Formats: PDF (A3), DWG, 2 JPG, 1 MP4. Not for construction. No permit/seal.</p>
       </section>
 
       <section id="how-it-works" className="space-y-6">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Process</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">How the Full-Stack Preview works</h2>
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Process</p>
+          <h2 className="text-3xl font-semibold text-ink">How the Full-Stack Preview works</h2>
           <p className="max-w-3xl text-muted">Six steps. Your SLA starts at the pre-flight call.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -118,8 +154,8 @@ export default function HomePage() {
               key={step.title}
               className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accentFill/10 text-white">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accentFill/10 text-ink">
                   {idx + 1}
                 </span>
                 Step {idx + 1}
@@ -133,7 +169,7 @@ export default function HomePage() {
           {qaChips.map((chip) => (
             <span
               key={chip}
-              className="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-paper"
+              className="rounded-full border border-accent/30 bg-white px-4 py-1.5 text-xs font-semibold text-ink"
             >
               {chip}
             </span>
@@ -142,9 +178,9 @@ export default function HomePage() {
       </section>
 
       <section className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Who it's for</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Who it's for</h2>
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Who it's for</p>
+          <h2 className="text-3xl font-semibold text-ink">Who it's for</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm">
@@ -162,57 +198,93 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="pricing" className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Pricing for 2k–20k ft² offices</h2>
+      <section id="pricing" className="space-y-6">
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Pricing</p>
+          <h2 className="text-3xl font-semibold text-ink">Pricing for 2k–20k ft² offices</h2>
           <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
         </div>
+        <p className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 px-4 py-3 text-sm text-ink">
+          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+        </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
-            <div
-              key={tier.range}
-              className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
-            >
+            <div key={tier.range} className="rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
+              {tier.note && tier.note !== 'Launch' && (
+              <span className="mb-3 inline-flex rounded-full bg-soft px-3 py-1 text-xs font-semibold text-accent">{tier.note}</span>
+            )}
               <p className="text-lg font-semibold">{tier.range}</p>
-              <p className="text-2xl font-bold text-ink">{tier.price}</p>
+              {tier.range === '20k+ ft²' ? (
+                <div className="mt-3 space-y-3">
+                  <p className="text-2xl font-bold text-ink">{tier.price}</p>
+                  <QuoteFormButton className="w-full rounded-full border border-accent/60 px-4 py-2 text-sm text-accent">
+                    Request a quote
+                  </QuoteFormButton>
+                </div>
+              ) : (
+                <p className="mt-3 text-2xl font-bold text-ink">{tier.price}</p>
+              )}
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted">One revision included  SketchUp on request  50/50 payment</p>
+        <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">What's included at every tier</p>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {pricingInclusions.map((item) => (
+              <li key={item} className="flex items-center gap-3 text-sm text-muted">
+                <BadgeCheck className="h-5 w-5 text-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
         <Link
           href="/pricing"
-          className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-flex w-fit rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
         >
           See full pricing & add-ons
         </Link>
       </section>
 
-      <section id="gift" className="space-y-3 rounded-3xl bg-ink px-6 py-8 text-paper shadow-xl">
-        <div className="flex flex-col gap-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Gift</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Try us with 2 images in 48 hours</h2>
+      <section id="gift" className="space-y-6 rounded-3xl bg-ink px-6 py-8 text-paper shadow-xl">
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Gift</p>
+          <h2 className="text-3xl font-semibold">Not ready for the full package? Start with 2 free style images in 48h</h2>
+          <p className="max-w-3xl text-soft">Perfect for testing our quality before a live deal—or refreshing a stale listing with zero risk.</p>
         </div>
-        <p className="max-w-3xl text-soft">
-          Have a live deal or a listing to refresh? Share a few details and we'll send two mid-quality images aligned with your style, free of charge.
-        </p>
-        <ul className="grid gap-2 sm:grid-cols-3">
-          <li className="text-sm text-soft">One per company.</li>
-          <li className="text-sm text-soft">No revisions.</li>
-          <li className="text-sm text-soft">Watermark included.</li>
-        </ul>
+        <div className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-soft">What you'll get</p>
+          <ul className="space-y-3 text-sm text-soft">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              2 AI-assisted images showing your client's preferred style (Modern Minimal, Tech Chic, or Warm Contemporary) applied to a generic office shell
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              48-hour delivery—no plan needed, just tell us the vibe
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              One per company (we trust Miami brokers—this is about building relationships, not gatekeeping)
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              Subtle watermark (removable if you upgrade to Full-Stack Preview)
+            </li>
+          </ul>
+        </div>
         <Link
           href="/gift"
-          className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-block rounded-full bg-accentFill px-8 py-4 text-base font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl"
         >
-          Get 2 images in 48 h
+          Claim your free images
         </Link>
       </section>
 
       <section id="cases" className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Cases</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">See a Full-Stack Preview in context</h2>
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Cases</p>
+          <h2 className="text-3xl font-semibold text-ink">See a Full-Stack Preview in context</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {caseStudies.slice(0, 2).map((cs) => (
@@ -220,10 +292,17 @@ export default function HomePage() {
               key={cs.title}
               className="group space-y-3 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{cs.eyebrow}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">{cs.eyebrow}</p>
               <h3 className="text-xl font-semibold text-ink">{cs.title}</h3>
               <p className="text-sm text-muted">{cs.body}</p>
-              <MediaPlaceholder label="Placeholder - render still" aspect="aspect-[4/3]" />
+              <div className="grid gap-3 md:grid-cols-2">
+                <MediaPlaceholder label="Clean plan and axonometric demo · 3k ft²" aspect="aspect-[4/3]" icon="plan" />
+                <div className="space-y-3">
+                  <MediaPlaceholder label="Render still · demo set 1" aspect="aspect-[4/3]" icon="image" />
+                  <MediaPlaceholder label="Render still · demo set 1" aspect="aspect-[4/3]" icon="image" />
+                </div>
+              </div>
+              <MediaPlaceholder label="Video thumbnail · 60-second walkthrough" icon="video" />
               <ul className="list-disc space-y-1 pl-5 text-sm text-muted">
                 {cs.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
@@ -241,9 +320,9 @@ export default function HomePage() {
       </section>
 
       <section className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Quick answers</p>
-          <h2 className="text-2xl font-semibold sm:text-3xl">Quick answers for busy brokers</h2>
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Quick answers</p>
+          <h2 className="text-3xl font-semibold text-ink">Quick answers for busy brokers</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {quickFaqs.map((item) => (
@@ -251,7 +330,7 @@ export default function HomePage() {
               key={item.question}
               className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">FAQ</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">FAQ</p>
               <h3 className="mt-1 text-lg font-semibold text-ink">{item.question}</h3>
               <p className="mt-2 text-sm text-muted">{item.answer}</p>
             </div>
@@ -264,35 +343,29 @@ export default function HomePage() {
           See full FAQ
         </Link>
       </section>
+
       <section id="cta" className="overflow-hidden rounded-3xl bg-ink px-8 py-10 text-paper shadow-xl">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Next step</p>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Tell us about the deal and timeline</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Next step</p>
+            <h2 className="text-3xl font-semibold">Tell us about the deal and timeline</h2>
             <p className="max-w-2xl text-sm text-soft">
               Share the submarket, ft range, and key dates. We will tell you if a Full-Stack Preview fits and when we can deliver.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={primaryCta}
-              className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            <QuoteFormButton className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:-translate-y-0.5 hover:shadow-xl">
+              Get a custom quote
+            </QuoteFormButton>
+            <Link
+              href="/contact"
+              className="rounded-full border border-accent/40 bg-transparent px-5 py-3 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:text-ink"
             >
-              Schedule 15 min Call
-            </a>
-            <a
-              href="mailto:planora.testfit@gmail.com"
-              className="rounded-full border border-accent/40 bg-transparent px-5 py-3 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              Or email us at planora.testfit@gmail.com
-            </a>
+              Use the contact form
+            </Link>
           </div>
         </div>
       </section>
     </div>
   )
 }
-
-
-
-

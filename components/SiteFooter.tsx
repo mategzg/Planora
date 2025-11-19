@@ -26,6 +26,7 @@ export function SiteFooter() {
             LinkedIn
           </a>
         </div>
+        <p className="text-xs text-muted">Built by architecture graduates who understand how deals actually move.</p>
         <div className="text-xs text-muted">(c) 2025 Planora. All rights reserved.</div>
       </div>
     </footer>

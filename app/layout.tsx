@@ -1,10 +1,11 @@
-﻿import './globals.css'
+import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import type { ReactNode } from 'react'
 import { SITE_URL } from '@/lib/content'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
+import { QuoteFormProvider } from '@/components/QuoteFormProvider'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-inter' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-space-grotesk' })
@@ -41,16 +42,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-        <div className="min-h-screen bg-soft text-ink">
-          <SiteHeader />
-          <main className="mx-auto max-w-6xl px-6 pb-20 pt-12">{children}</main>
-          <SiteFooter />
-        </div>
+        <QuoteFormProvider>
+          <div className="min-h-screen bg-soft text-ink">
+            <SiteHeader />
+            <main className="mx-auto max-w-6xl px-6 pb-20 pt-12">{children}</main>
+            <SiteFooter />
+          </div>
+        </QuoteFormProvider>
       </body>
     </html>
   )
 }
-
-
-
-

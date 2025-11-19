@@ -1,14 +1,8 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  addOns,
-  individualItems,
-  pricingConditions,
-  pricingTiers,
-  primaryCta,
-} from '@/lib/content'
-
-const quoteMailto = 'mailto:planora.testfit@gmail.com?subject=Planora%20%20quote%20request%20%20%5BBroker%5D%20%20%5BSubmarket%5D%20%20%5BFt%5D&body=Hi%20Planora%20team,%0D%0A%0D%0AWe%20need%20a%20quote%20for%20a%20space%20above%2020k%20ft%20in%20%5BSubmarket%5D.%0D%0ACompany:%20%5BCompany%5D.%20Timeline:%20%5BDate%5D.%0D%0APlease%20advise%20next%20steps.%0D%0A%20[Name],%20[Phone]';
+import { QuoteFormButton } from '@/components/QuoteFormButton'
+import { addOns, individualItems, pricingConditions, pricingTiers, pricingInclusions } from '@/lib/content'
+import { BadgeCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pricing | Planora',
@@ -30,10 +24,13 @@ export default function PricingPage() {
   return (
     <div className="space-y-10">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pricing</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Pricing</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Full Launch pricing and add-ons</h1>
         <p className="max-w-3xl text-muted">Fixed-scope pricing by square footage. One package, no hidden extras.</p>
         <p className="text-sm text-muted">Launch pricing – first 60 days – up to 5 clients</p>
+        <p className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 px-4 py-3 text-sm text-ink">
+          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+        </p>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pricingTiers.map((tier) => (
@@ -41,19 +38,34 @@ export default function PricingPage() {
             key={tier.range}
             className="rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
           >
+            {tier.note && tier.note !== 'Launch' && (
+              <span className="mb-3 inline-flex rounded-full bg-soft px-3 py-1 text-xs font-semibold text-accent">{tier.note}</span>
+            )}
             <p className="text-lg font-semibold">{tier.range}</p>
             {tier.range === '20k+ ft²' ? (
-              <a
-                href={quoteMailto}
-                className="text-2xl font-bold text-accent underline underline-offset-4"
-              >
-                Request a quote
-              </a>
+              <div className="mt-3 space-y-3">
+                <p className="text-2xl font-bold text-ink">{tier.price}</p>
+                <QuoteFormButton className="w-full rounded-full border border-accent/60 px-4 py-2 text-sm text-accent">
+                  Request a quote
+                </QuoteFormButton>
+              </div>
             ) : (
               <p className="text-2xl font-bold text-ink">{tier.price}</p>
             )}
           </div>
         ))}
+      </div>
+
+      <div className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-6 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">What's included at every tier</p>
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {pricingInclusions.map((item) => (
+            <li key={item} className="flex items-center gap-3 text-sm text-muted">
+              <BadgeCheck className="h-5 w-5 text-accent" />
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -98,12 +110,9 @@ export default function PricingPage() {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        <a
-          href={primaryCta}
-          className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          Schedule 15 min Call
-        </a>
+        <QuoteFormButton className="rounded-full bg-accentFill px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+          Get a custom quote
+        </QuoteFormButton>
         <Link
           href="/gift"
           className="rounded-full border border-accent/60 px-5 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-paper hover:shadow-md"
@@ -114,7 +123,3 @@ export default function PricingPage() {
     </div>
   )
 }
-
-
-
-

@@ -1,18 +1,18 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { MediaPlaceholder } from '@/components/MediaPlaceholder'
 import { qaChips, steps } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'How it works | Planora',
   description:
-    "See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.",
+    'See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.',
   alternates: {
     canonical: 'https://planora-testfit.vercel.app/how-it-works',
   },
   openGraph: {
     title: 'How it works | Planora',
     description:
-      "See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.",
+      'See the 6-step Full-Stack Preview process for Miami tenant-rep brokers: brief, pre-flight call, test-fit, renders, video, and delivery.',
     url: 'https://planora-testfit.vercel.app/how-it-works',
     images: ['/og-planora.png'],
   },
@@ -22,7 +22,7 @@ export default function HowItWorksPage() {
   return (
     <div className="space-y-12">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Process</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Process</p>
         <h1 className="text-3xl font-bold sm:text-4xl">How the Full-Stack Preview works</h1>
         <p className="max-w-3xl text-muted">SLA starts at the pre-flight call and pauses if inputs are incomplete.</p>
       </header>
@@ -32,13 +32,13 @@ export default function HowItWorksPage() {
             key={step.title}
             className="space-y-3 rounded-2xl border border-slate-200 bg-paper p-5 shadow-sm"
           >
-            <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               <span>Step {idx + 1}</span>
               <span>{step.title.includes('T+') ? step.title.split(' ')[0] : '72–96 h'}</span>
             </div>
             <h2 className="text-lg font-semibold text-ink">{step.title}</h2>
             <p className="text-sm text-muted">{step.detail}</p>
-            <MediaPlaceholder label="Placeholder - process visual" aspect="aspect-[4/3]" />
+            <MediaPlaceholder label="Process visual placeholder" aspect="aspect-[4/3]" icon="plan" />
           </article>
         ))}
       </div>
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
         {qaChips.map((chip) => (
           <span
             key={chip}
-            className="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-paper"
+            className="rounded-full border border-accent/30 bg-white px-4 py-1.5 text-xs font-semibold text-ink"
           >
             {chip}
           </span>
@@ -56,12 +56,3 @@ export default function HowItWorksPage() {
     </div>
   )
 }
-
-
-
-
-
-
-
-
-

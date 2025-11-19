@@ -3,7 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { navItems, primaryCta } from '@/lib/content'
+import { navItems } from '@/lib/content'
+import { QuoteFormButton } from '@/components/QuoteFormButton'
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -41,12 +42,9 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a
-          href={primaryCta}
-          className="rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          Schedule 15 min Call
-        </a>
+        <QuoteFormButton className="rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:brightness-95">
+          Get a custom quote
+        </QuoteFormButton>
       </div>
     </header>
   )
