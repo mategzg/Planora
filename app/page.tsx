@@ -216,7 +216,6 @@ export default function HomePage() {
               <p className="text-lg font-semibold">{tier.range}</p>
               {tier.range === '20k+ ft²' ? (
                 <div className="mt-3 space-y-3">
-                  <p className="text-2xl font-bold text-ink">{tier.price}</p>
                   <QuoteFormButton className="w-full rounded-full border border-accent/60 px-4 py-2 text-sm text-accent">
                     Request a quote
                   </QuoteFormButton>
