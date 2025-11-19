@@ -111,12 +111,12 @@ export const addOns = [
   },
   {
     title: '+1 render',
-    price: 'US$ 400',
+    price: 'US$ 300',
     detail: 'Additional still image (interior or interior/exterior) at Launch quality.',
   },
   {
     title: '+30s of extra video',
-    price: 'US$ 800',
+    price: 'US$ 600',
     detail: 'Adds 30 seconds of camera moves to the MP4 deliverable.',
   },
 ]
