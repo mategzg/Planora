@@ -325,11 +325,13 @@ export default function HomePage() {
               </div>
               <div className="space-y-2">
                 <video
-                  className="w-full rounded-2xl border border-muted/20 bg-black shadow-sm"
+                  className="w-full overflow-hidden rounded-2xl border border-muted/20 shadow-sm"
                   controls
                   playsInline
-                  poster={cs.media.video.poster}
-                  preload="metadata"
+                  muted
+                  autoPlay
+                  loop
+                  preload="auto"
                 >
                   <source src={cs.media.video.src} type="video/mp4" />
                   Your browser does not support the video tag.

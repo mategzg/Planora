@@ -139,16 +139,16 @@ export const caseStudies = [
     media: {
       plan: {
         src: '/media/case-demo-plan.jpg',
-        alt: 'Placeholder floor plan for a 3k ft² demo project.',
+        alt: 'Floor plan for a 3k ft² demo project.',
       },
       renders: [
         {
           src: '/media/case-demo-render-1.jpg',
-          alt: 'Placeholder render showing lounge seating and reception.',
+          alt: 'Render showing lounge seating and reception.',
         },
         {
           src: '/media/case-demo-render-2.jpg',
-          alt: 'Placeholder render showing workstations and focus rooms.',
+          alt: 'Render showing workstations and focus rooms.',
         },
       ],
       video: {
