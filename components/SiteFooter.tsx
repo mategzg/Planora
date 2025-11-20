@@ -22,9 +22,6 @@ export function SiteFooter() {
           <a className="text-accent transition hover:opacity-80" href="mailto:planora.testfit@gmail.com">
             planora.testfit@gmail.com
           </a>
-          <a className="text-accent transition hover:opacity-80" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
         </div>
       </div>
       <div className="border-t border-muted/10 text-center px-6 pt-8 pb-4">

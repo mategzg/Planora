@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { QuoteFormButton } from '@/components/QuoteFormButton'
 import { ContactForm } from '@/components/forms/ContactForm'
 
+const whatsappMessage = encodeURIComponent(
+  'Hola Planora, quiero coordinar un Full-Stack Preview. Estos son los detalles del deal:'
+)
+const whatsappHref = `https://wa.me/51987790457?text=${whatsappMessage}`
+
 export const metadata: Metadata = {
   title: 'Contact | Planora',
   description:
@@ -35,8 +40,16 @@ export default function ContactPage() {
           <a className="text-lg font-semibold text-ink" href="mailto:planora.testfit@gmail.com">
             planora.testfit@gmail.com
           </a>
-          <p className="text-sm text-muted">WhatsApp: +51 987 790 457</p>
           <p className="text-sm text-muted">We respond within one business day.</p>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-300/50 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-700 transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-500/20"
+          >
+            Chat on WhatsApp
+            <span aria-hidden>→</span>
+          </a>
           <QuoteFormButton className="inline-flex w-fit rounded-full bg-accentFill px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
             Schedule 15 min Call + schedule call
           </QuoteFormButton>
