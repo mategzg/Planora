@@ -300,42 +300,45 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold text-ink">{cs.title}</h3>
               <p className="text-sm text-muted">{cs.body}</p>
               <div className="grid gap-3 lg:grid-cols-[1.35fr,0.65fr]">
-                <Image
-                  src={cs.media.plan.src}
-                  alt={cs.media.plan.alt}
-                  width={1600}
-                  height={1200}
-                  className="h-full w-full rounded-2xl border border-muted/20 object-cover"
-                  sizes="(min-width: 1024px) 60vw, 100vw"
-                  priority
-                />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-muted/20">
+                  <Image
+                    src={cs.media.plan.src}
+                    alt={cs.media.plan.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    priority
+                  />
+                </div>
                 <div className="space-y-3">
                   {cs.media.renders.map((render) => (
-                    <Image
-                      key={render.src}
-                      src={render.src}
-                      alt={render.alt}
-                      width={1600}
-                      height={900}
-                      className="h-full w-full rounded-2xl border border-muted/20 object-cover"
-                      sizes="(min-width: 1024px) 28vw, 100vw"
-                    />
+                    <div key={render.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-muted/20">
+                      <Image
+                        src={render.src}
+                        alt={render.alt}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 28vw, 100vw"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
               <div className="space-y-2">
-                <video
-                  className="w-full overflow-hidden rounded-2xl border border-muted/20 shadow-sm"
-                  controls
-                  playsInline
-                  muted
-                  autoPlay
-                  loop
-                  preload="auto"
-                >
-                  <source src={cs.media.video.src} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className="relative aspect-video overflow-hidden rounded-2xl border border-muted/20 shadow-sm">
+                  <video
+                    className="h-full w-full object-cover"
+                    controls
+                    playsInline
+                    muted
+                    autoPlay
+                    loop
+                    preload="auto"
+                  >
+                    <source src={cs.media.video.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 {cs.media.video.caption ? (
                   <p className="text-xs text-muted">{cs.media.video.caption}</p>
                 ) : null}
