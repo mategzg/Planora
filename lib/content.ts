@@ -136,24 +136,27 @@ export const caseStudies = [
       'Clean 2D + axo for landlord updates.',
       'Two stills + 60-second video for tenant and landlord.',
     ],
-  },
-  {
-    eyebrow: 'Demo – 14k ft – Delivered in 72 h',
-    title: 'Demo 14k ft – Delivered in 72 h',
-    body: 'Single option aligned with target ratios.',
-    bullets: [
-      'Clean 2D + section for internal review.',
-      'Two stills + 60-second video for the leasing team.',
-    ],
-  },
-  {
-    eyebrow: 'Demo – 8k ft – Delivered in 84 h',
-    title: 'Hybrid floorplate for a growth tenant',
-    body: 'Balanced focus rooms + open plan for Miami corridors.',
-    bullets: [
-      'Test-fit aligned to headcount and ratios.',
-      'Placeholder stills + 60s walkthrough for landlord/tenant.',
-    ],
+    media: {
+      plan: {
+        src: '/media/case-demo-plan.jpg',
+        alt: 'Placeholder floor plan for a 3k ft² demo project.',
+      },
+      renders: [
+        {
+          src: '/media/case-demo-render-1.jpg',
+          alt: 'Placeholder render showing lounge seating and reception.',
+        },
+        {
+          src: '/media/case-demo-render-2.jpg',
+          alt: 'Placeholder render showing workstations and focus rooms.',
+        },
+      ],
+      video: {
+        src: '/media/case-demo-video.mp4',
+        poster: '/media/case-demo-video-poster.jpg',
+        caption: 'Placeholder 60-second walkthrough — replace with your MP4.',
+      },
+    },
   },
 ]
 

@@ -60,26 +60,28 @@ export function HomeHero({ proofPoints }: { proofPoints: ProofPoint[] }) {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-0">
-          <div className="relative overflow-hidden rounded-3xl border border-accent/10 bg-gradient-to-br from-soft via-soft to-accent/10 shadow-2xl">
-            <div
-              className="absolute inset-0 opacity-[0.04]"
-              style={{
-                backgroundImage: 'linear-gradient(#17C3CE 1px, transparent 1px), linear-gradient(90deg, #17C3CE 1px, transparent 1px)',
-                backgroundSize: '28px 28px',
-              }}
-            />
-            <div className="relative flex min-h-[360px] flex-col justify-between gap-10 p-10 text-center">
-              <div>
-                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border border-accent/30 bg-white/80 text-4xl">
-                  ▶
-                </div>
-                <p className="text-xl font-semibold text-ink">Preview: 60-second walkthrough</p>
-                <p className="mt-2 text-sm text-muted">
-                  Shot for mid-ticket Miami deals—email-ready pacing with one clear CTA frame.
-                </p>
-              </div>
-            </div>
+        <div className="mt-8 md:mt-0 space-y-4">
+          <div className="relative overflow-hidden rounded-3xl border border-accent/10 bg-black shadow-2xl">
+            <video
+              className="aspect-video w-full"
+              src="/media/hero-preview.mp4"
+              poster="/media/hero-preview-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="metadata"
+            >
+              <source src="/media/hero-preview.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="text-center md:text-left">
+            <p className="text-xl font-semibold text-ink">Preview: 60-second walkthrough</p>
+            <p className="mt-2 text-sm text-muted">
+              Shot for mid-ticket Miami deals—email-ready pacing with one clear CTA frame.
+            </p>
           </div>
         </div>
       </div>
