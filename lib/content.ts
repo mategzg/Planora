@@ -154,7 +154,7 @@ export const caseStudies = [
       video: {
         src: '/media/case-demo-video.mp4',
         poster: '/media/case-demo-video-poster.jpg',
-        caption: 'Placeholder 60-second walkthrough — replace with your MP4.',
+        caption: '60-second walkthrough preview',
       },
     },
   },

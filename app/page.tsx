@@ -327,10 +327,8 @@ export default function HomePage() {
                 <video
                   className="w-full rounded-2xl border border-muted/20 bg-black shadow-sm"
                   controls
-                  muted
                   playsInline
-                  autoPlay
-                  loop
+                  poster={cs.media.video.poster}
                   preload="metadata"
                 >
                   <source src={cs.media.video.src} type="video/mp4" />
