@@ -3,7 +3,7 @@ import { QuoteFormButton } from '@/components/QuoteFormButton'
 import { ContactForm } from '@/components/forms/ContactForm'
 
 const whatsappMessage = encodeURIComponent(
-  'Hola Planora, quiero coordinar un Full-Stack Preview. Estos son los detalles del deal:'
+  'Hi Planora, I want to coordinate a Full-Stack Preview. Here are the deal details:'
 )
 const whatsappHref = `https://wa.me/51987790457?text=${whatsappMessage}`
 
