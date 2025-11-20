@@ -27,7 +27,7 @@ export function SiteFooter() {
       <div className="border-t border-muted/10 text-center px-6 pt-8 pb-4">
         <p className="text-sm text-muted">Built by architecture graduates who understand how deals actually move.</p>
       </div>
-      <div className="text-center pb-6 text-xs text-muted">© 2025 Planora. All rights reserved.</div>
+      <div className="text-center pb-6 text-xs text-muted">&copy; 2025 Planora. All rights reserved.</div>
     </footer>
   )
 }
