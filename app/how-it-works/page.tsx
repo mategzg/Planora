@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { MediaPlaceholder } from '@/components/MediaPlaceholder'
 import { qaChips, steps } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -38,7 +37,6 @@ export default function HowItWorksPage() {
             </div>
             <h2 className="text-lg font-semibold text-ink">{step.title}</h2>
             <p className="text-sm text-muted">{step.detail}</p>
-            <MediaPlaceholder label="Process visual placeholder" aspect="aspect-[4/3]" icon="plan" />
           </article>
         ))}
       </div>
