@@ -325,9 +325,12 @@ export default function HomePage() {
               </div>
               <div className="space-y-2">
                 <video
-                  className="w-full rounded-2xl border border-muted/20 shadow-sm"
-                  poster={cs.media.video.poster}
+                  className="w-full rounded-2xl border border-muted/20 bg-black shadow-sm"
                   controls
+                  muted
+                  playsInline
+                  autoPlay
+                  loop
                   preload="metadata"
                 >
                   <source src={cs.media.video.src} type="video/mp4" />
