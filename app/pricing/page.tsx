@@ -30,7 +30,7 @@ export default function PricingPage() {
       </header>
 
       <p className="rounded-2xl border border-accent/15 bg-paper/70 px-4 py-3 text-sm text-muted text-center italic">
-        Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+        Launch pricing expires Feb 7, 2026. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
       </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

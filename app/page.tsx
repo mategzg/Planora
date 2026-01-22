@@ -207,7 +207,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-muted">Fixed-scope pricing by square footage. One package, no surprises, no hourly rates.</p>
         </div>
         <p className="text-sm text-muted italic border border-accent/15 bg-paper/70 px-5 py-3 rounded-2xl max-w-3xl">
-          Launch pricing expires Dec 31, 2025. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
+          Launch pricing expires Feb 7, 2026. Lock in US$ 1,000 for 2–5k ft² deals before rates adjust to market.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
